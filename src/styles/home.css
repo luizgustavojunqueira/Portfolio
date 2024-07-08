@@ -1,5 +1,4 @@
 .home {
-  background-color: #222629;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -23,14 +22,6 @@
 
 .icon {
   margin: 0 0.5rem;
-}
-
-.dark_green {
-  color: #2eba18;
-}
-
-.white {
-  color: #fff;
 }
 
 @media (max-width: 500px) {

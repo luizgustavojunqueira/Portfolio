@@ -5,7 +5,7 @@ import EmailIcon from "../assets/email_icon.svg";
 
 export default function Home() {
   return (
-    <section className="home">
+    <section className="home dark_gray_bg">
       <header>
         <h1 className="welcome_text dark_green">Hello!&nbsp;</h1>
         <h1 className="welcome_text white">I'm Luiz Gustavo</h1>

@@ -28,8 +28,50 @@ body {
   min-height: 100vh;
 }
 
-@media screen (max-width: 500px) {
-  .home header {
-    font-size: 1.25rem;
-  }
+.ligth_green {
+  color: #87c333;
+}
+
+.dark_green {
+  color: #2eba18;
+}
+
+.dark_gray {
+  color: #222629;
+}
+
+.light_gray {
+  color: #6b6e70;
+}
+
+.medium_gray {
+  color: #333940;
+}
+
+.white {
+  color: #fff;
+}
+
+.ligth_green_bg {
+  background-color: #87c333;
+}
+
+.dark_green_bg {
+  background-color: #2eba18;
+}
+
+.dark_gray_bg {
+  background-color: #222629;
+}
+
+.light_gray_bg {
+  background-color: #6b6e70;
+}
+
+.medium_gray_bg {
+  background-color: #333940;
+}
+
+.white_bg {
+  background-color: #fff;
 }
