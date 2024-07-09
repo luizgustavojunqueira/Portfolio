@@ -1,0 +1,65 @@
+.about {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about header {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+}
+
+.about h2 {
+  margin: 15px;
+}
+
+.about_content {
+  display: grid;
+  grid: 10% 90% / 70% 30%;
+  height: 90vh;
+  justify-content: center;
+}
+
+.about_header {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.about_header h3 {
+  margin: 15px;
+  margin-left: 80px;
+  font-size: 2rem;
+}
+
+.about_paragraphs {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.about_paragraphs p {
+  margin: 15px;
+  margin-left: 80px;
+  margin-right: 80px;
+  font-size: 1.1rem;
+  padding-top: 30px;
+}
+
+.profile_picture {
+  grid-column: 2;
+  grid-row: 2;
+
+  width: 90%;
+  max-height: 86%;
+  border-radius: 10px;
+}
+
+.profile_picture img {
+  width: 100%;
+  margin: 15px;
+}
