@@ -4,3 +4,57 @@
   display: flex;
   flex-direction: column;
 }
+
+.skills_header {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.8em;
+  margin: 15px;
+  margin-left: 80px;
+}
+
+
+h2 {
+  font-size: 1.25rem;
+}
+p{
+  font-size: 0.7em;
+  color: white;
+  margin:0 auto;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.icon_js img{
+  width: 125x;
+  height: 105px;
+  max-width: 80%;
+  max-height: 70%;
+  align-self: center;
+  margin: 0 auto;
+  
+}
+
+
+
+.item {
+	margin: 20px;
+  width: 140px;
+  height: 180px;
+	background: black;
+  max-width: 90%;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.containerSkills {
+  width: 80%;
+  height: 200px;
+	max-width: 90%;
+  max-height: 80%;
+	margin: 0 auto;
+  display: flex;
+  position: relative;
+  right: 7%;
+  
+  
+}
