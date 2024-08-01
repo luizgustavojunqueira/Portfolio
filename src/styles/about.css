@@ -11,10 +11,6 @@
   font-size: 1.5rem;
 }
 
-.about h2 {
-  margin: 15px;
-}
-
 .about_content {
   display: grid;
   grid: 10% 90% / 70% 30%;
@@ -25,16 +21,6 @@
 .about_header {
   grid-column: 1;
   grid-row: 1;
-}
-
-h2 {
-  font-size: 1.25rem;
-}
-
-.about_header h3 {
-  margin: 15px;
-  margin-left: 80px;
-  font-size: 2rem;
 }
 
 .about_paragraphs {
@@ -75,7 +61,7 @@ h2 {
     font-size: 2rem;
   }
 
-  .about_header h3 {
+  h3 {
     font-size: 2.5rem;
   }
 
@@ -109,7 +95,7 @@ h2 {
     justify-content: flex-start;
   }
 
-  .about_header h3 {
+  h3 {
     margin-left: 0;
     font-size: 3rem;
   }
@@ -139,7 +125,7 @@ h2 {
     height: 130vh;
   }
 
-  .about_header h3 {
+  h3 {
     font-size: 2rem;
   }
 

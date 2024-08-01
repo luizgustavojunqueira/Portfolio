@@ -28,6 +28,17 @@ body {
   min-height: 100vh;
 }
 
+h2 {
+  margin: 15px;
+  font-size: 1.25rem;
+}
+
+h3 {
+  margin: 15px;
+  margin-left: 80px;
+  font-size: 2rem;
+}
+
 .light_green {
   color: #87c333;
 }
