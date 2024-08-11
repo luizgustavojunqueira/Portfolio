@@ -1,13 +1,21 @@
 .home {
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.home header {
+.home_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.home_title {
   display: flex;
   flex-direction: row;
   font-size: 1.5rem;
@@ -22,6 +30,21 @@
 
 .icon {
   margin: 0 0.5rem;
+}
+
+.home_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page_link {
+  text-decoration: none;
+  color: white;
+}
+
+.page_link:hover {
+  color: #87c333;
 }
 
 @media (max-width: 500px) {

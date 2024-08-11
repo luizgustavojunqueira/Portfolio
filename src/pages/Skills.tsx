@@ -16,7 +16,7 @@ import SkillItem from "../components/SkillItem";
 
 export default function Skills() {
   return (
-    <section className="skills dark_gray_bg">
+    <section id="skills" className="skills dark_gray_bg">
       <header>
         <h2 className="dark_green">Skills</h2>
       </header>

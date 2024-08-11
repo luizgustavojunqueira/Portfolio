@@ -3,7 +3,7 @@ import ProfilePicture from "../assets/profile_picture.jpg";
 
 export default function About() {
   return (
-    <section className="about medium_gray_bg">
+    <section id="about" className="about medium_gray_bg">
       <header>
         <h2 className="dark_green">About</h2>
       </header>
