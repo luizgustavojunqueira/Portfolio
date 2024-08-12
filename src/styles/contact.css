@@ -1,6 +1,6 @@
 .contact {
-  height: fit-content;
   min-height: 100vh;
+  height: fit-content;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -30,8 +30,6 @@
   min-height: 40vh;
   width: fit-content;
   height: fit-content;
-  max-height: 50vh;
-  max-width: 45vw;
 
   border-radius: 15px;
 }
@@ -46,8 +44,6 @@ textarea {
   margin-top: 5px;
   border: none;
   border-radius: 5px;
-  max-height: 50vh;
-  max-width: 40vw;
   font-size: 1.2rem;
 }
 
@@ -108,4 +104,41 @@ textarea {
 
 .contact p {
   font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .contact_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  }
+  .contact_form {
+    width: 70vw;
+  }
+  .contact_form input,
+  textarea {
+    width: 90%;
+  }
+  .contact_form button {
+    width: 80%;
+  }
+  .contact_left,
+  .contact_right {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+  .contact a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
 }
