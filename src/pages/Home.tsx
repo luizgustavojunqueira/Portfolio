@@ -8,13 +8,13 @@ export default function Home() {
     <section id="home" className="home dark_gray_bg">
       <header className="home_header">
         <a className="page_link" href="#about">
-          <p>About&nbsp; </p>
+          <p>About </p>
         </a>
         <a className="page_link" href="#skills">
-          <p>Skills&nbsp; </p>
+          <p>Skills</p>
         </a>
         <a className="page_link" href="#contact">
-          <p>Contact&nbsp; </p>
+          <p>Contact</p>
         </a>
       </header>
 

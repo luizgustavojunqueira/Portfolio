@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+.home_header {
+  display: flex;
+  flex-direction: row;
+}
+
 .home_content {
   display: flex;
   flex-direction: column;
@@ -32,15 +37,11 @@
   margin: 0 0.5rem;
 }
 
-.home_header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .page_link {
   text-decoration: none;
   color: white;
+  justify-content: center;
+  margin: 0 0.5rem;
 }
 
 .page_link:hover {
