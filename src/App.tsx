@@ -5,6 +5,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 // import Projects from "./pages/Projects";
 
+import ArrowTopIcon from "./assets/arrow_top_icon.png";
+
 function App() {
   return (
     <>
@@ -15,6 +17,10 @@ function App() {
         // <Projects />
       }
       <Contact />
+
+      <button id="backToTop" onClick={() => window.scrollTo(0, 0)}>
+        <img src={ArrowTopIcon} />
+      </button>
     </>
   );
 }
