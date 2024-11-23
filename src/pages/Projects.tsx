@@ -1,3 +1,5 @@
+import ProjectItem from "../components/ProjectItem";
+
 export default function Projects() {
   return (
     <section>
@@ -9,6 +11,16 @@ export default function Projects() {
         <section className="projects_content">
           <section className="projects_header">
             <h3 className="light_green">What I have done</h3>
+          </section>
+
+          <section>
+            <ProjectItem
+              name="Project 1"
+              description="Description 1"
+              image=""
+              link=""
+              tecnologies=""
+            />
           </section>
         </section>
       </section>
