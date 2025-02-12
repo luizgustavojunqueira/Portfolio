@@ -8,21 +8,21 @@ import Contact from "./pages/Contact";
 import ArrowTopIcon from "./assets/arrow_top_icon.png";
 
 function App() {
-  return (
-    <>
-      <Home />
-      <About />
-      <Skills />
-      {
-        // <Projects />
-      }
-      <Contact />
+    return (
+        <>
+            <Home />
+            <About />
+            <Skills />
+            {
+                // <Projects />
+            }
+            <Contact />
 
-      <button id="backToTop" onClick={() => window.scrollTo(0, 0)}>
-        <img src={ArrowTopIcon} />
-      </button>
-    </>
-  );
+            <button id="backToTop" onClick={() => window.scrollTo(0, 0)}>
+                <img src={ArrowTopIcon} />
+            </button>
+        </>
+    );
 }
 
 export default App;
