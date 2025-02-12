@@ -3,7 +3,7 @@ import ProjectItem from "../components/ProjectItem";
 export default function Projects() {
   return (
     <section>
-      <section className="projects dark_gray_bg">
+      <section className="page dark_gray_bg">
         <header>
           <h2 className="dark_green">Projects</h2>
         </header>
