@@ -1,121 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
 
 :root {
-  font-family: "FiraCode";
-  font-family: "Fira Code", monospace;
-  font-optical-sizing: auto;
-  font-style: normal;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: "FiraCode";
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-  width: 100%;
+    width: 100%;
+}
+
+* {
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 100%;
-  min-height: 100vh;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 100%;
+    min-height: 100vh;
 }
 
 h2 {
-  margin: 15px;
-  font-size: 1.25rem;
+    margin: 15px;
+    font-size: 1.25rem;
 }
 
 h3 {
-  margin: 15px;
-  margin-left: 80px;
-  font-size: 2rem;
+    margin: 15px;
+    margin-left: 80px;
+    font-size: 2rem;
 }
 
 .light_green {
-  color: #87c333;
+    color: #87c333;
 }
 
 .dark_green {
-  color: #2eba18;
+    color: #2eba18;
 }
 
 .dark_gray {
-  color: #222629;
+    color: #222629;
 }
 
 .light_gray {
-  color: #6b6e70;
+    color: #6b6e70;
 }
 
 .medium_gray {
-  color: #333940;
+    color: #333940;
 }
 
 .white {
-  color: #fff;
+    color: #fff;
 }
 
 .ligth_green_bg {
-  background-color: #87c333;
+    background-color: #87c333;
 }
 
 .dark_green_bg {
-  background-color: #2eba18;
+    background-color: #2eba18;
 }
 
 .dark_gray_bg {
-  background-color: #222629;
+    background-color: #222629;
 }
 
 .light_gray_bg {
-  background-color: #6b6e70;
+    background-color: #6b6e70;
 }
 
 .medium_gray_bg {
-  background-color: #333940;
+    background-color: #333940;
 }
 
 .white_bg {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 #backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #33373a;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  padding: 10px;
-  font-size: 1.5rem;
-  cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #33373a;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #222629;
+    background: #222629;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #87c333;
+    background: #87c333;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #2eba18;
+    background: #2eba18;
 }
