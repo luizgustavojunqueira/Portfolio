@@ -28,24 +28,26 @@ export default function Contact() {
                 <h2 className="dark_green">Contact</h2>
             </header>
 
-            <section className="page_content">
+            <section className="page_content ">
                 <section className="page_header">
                     <h3 className="light_green">Get in touch</h3>
                 </section>
 
-                <section className="contact_body">
-                    <section className="contact_left">
-                        <p> Send me an e-mail </p>
+                <section className="contact_info">
+                    <section className="contact_panel">
+                        <section className="contact_header">
+                            <h4> Send me an e-mail </h4>
+                        </section>
                         <section className="contact_form">
                             <input
                                 type="text"
                                 placeholder="Your name"
                                 onChange={(e) => handleNameInput(e)}
                             />
-                            <textarea
+                            <input
                                 placeholder="Your message"
                                 onChange={(e) => handleMessageInput(e)}
-                            ></textarea>
+                            ></input>
 
                             <button onClick={(e) => sendEmail(e)}>
                                 Send Message
@@ -53,8 +55,10 @@ export default function Contact() {
                         </section>
                     </section>
 
-                    <section className="contact_right">
-                        <p>Or reach me out on social media</p>
+                    <section className="contact_panel">
+                        <section className="contact_header">
+                            <h4> Or reach me out on social media </h4>
+                        </section>
 
                         <section className="contact_socialMedia">
                             <a
