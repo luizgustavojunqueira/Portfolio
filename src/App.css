@@ -1,49 +1,126 @@
 #root {
+    width: 100vw;
+}
+
+#app {
     width: 100%;
-    height: 100vh;
 }
 
 .page {
-    height: fit-content;
     min-height: 100vh;
+}
+
+.profile_picture {
+    width: 30rem;
+    border-radius: 50%;
+    border: 2px solid var(--light-green);
+    box-shadow: 0 0 10px 0 var(--dark-green);
+    transition: transform 0.3s;
+}
+
+.profile_picture:hover {
+    transform: scale(1.1);
+}
+
+.highlight-text {
+    color: var(--light-green);
+}
+
+.grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.page_content {
-    width: 100vw;
-
-    max-width: 100vw;
+.flex-center {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.page_header {
-    height: 40px;
-    width: 100vw;
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.row {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+a.nav {
+    text-decoration: none;
+    color: var(--light-green);
+
+    margin: 5px 10px;
+    padding: 5px 10px;
+
+    transition:
+        color 0.3s,
+        box-shadow 0.1s ease-in-out;
+}
+
+a.nav:hover {
+    color: var(--dark-green);
+    box-shadow: 1px 3px 0 -2px var(--dark-green);
+}
+
+.margin-10 * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.margin-sides-10 * {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icon {
+    width: 65px;
+    height: 65px;
+    fill: light-dark(var(--dark-gray), var(--very-light-green));
+}
+
+.large {
+    font-size: 2rem;
+}
+
+.medium {
     font-size: 1.5rem;
 }
 
-.page_title {
-    width: 90vw;
-    justify-content: flex-start;
+.small {
+    font-size: 1.1rem;
 }
 
-.page_title h3 {
-    margin: 0;
+.page-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-p {
-    font-size: 1.5rem;
-    padding: 0 0 1rem 0;
-    margin: 0;
+.page-header h2 {
+    padding: 10px 20px;
+    color: var(--light-green);
+}
+
+.content-container {
     margin-left: 7rem;
     margin-right: 7rem;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+.content * {
+    margin: 10px;
 }

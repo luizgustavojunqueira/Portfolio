@@ -1,26 +1,29 @@
 import "./App.css";
 import Home from "./pages/Home";
-import Skills from "./pages/Skills";
+import Header from "./components/Header.tsx";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+// import Skills from "./pages/Skills";
+// import Contact from "./pages/Contact";
 // import Projects from "./pages/Projects";
 
-import ArrowTopIcon from "./assets/arrow_top_icon.png";
+// import ArrowTopIcon from "./assets/arrow_top_icon.png";
 
 function App() {
     return (
         <>
-            <Home />
-            <About />
-            <Skills />
-            {
-                // <Projects />
-            }
-            <Contact />
-
-            <button id="backToTop" onClick={() => window.scrollTo(0, 0)}>
-                <img src={ArrowTopIcon} />
-            </button>
+            <section id="app">
+                <Header />
+                <Home />
+                <About />
+                {/* <Skills /> */}
+                {/* <Contact /> */}
+                {/* <Projects /> */}
+                {/* <footer>
+                    <a href="#top">
+                        <img src={ArrowTopIcon} alt="Arrow to top" />
+                    </a>
+                </footer> */}
+            </section>
         </>
     );
 }

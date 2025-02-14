@@ -1,16 +1,16 @@
 export default function About() {
     return (
-        <section id="about" className="page medium_gray_bg">
-            <header className="page_header">
-                <h2 className="dark_green">About</h2>
-            </header>
+        <section id="about" className="flex-start column page">
+            <section className=" flex-start row page-header">
+                <h2 className="small">About</h2>
+            </section>
 
-            <section className="page_content">
-                <section className="page_title">
-                    <h3 className="light_green">Who I am</h3>
+            <section className="flex-center column content-container">
+                <section className="flex-center">
+                    <h3 className="highlight-text-dark large">Who I am</h3>
                 </section>
 
-                <section>
+                <section className="flex-start column medium content">
                     <p>
                         Hello! My name is Luiz Gustavo S. S. Junqueira. I am a
                         20-year-old Computer Science student at the Federal

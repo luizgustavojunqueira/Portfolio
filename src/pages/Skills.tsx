@@ -1,4 +1,3 @@
-import "../styles/skills.css";
 import javaScript from "../assets/javascript_icon.svg";
 import typeScript from "../assets/typescript_icon.svg";
 import python from "../assets/python_icon.svg";

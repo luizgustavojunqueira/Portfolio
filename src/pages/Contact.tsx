@@ -1,4 +1,3 @@
-import "../styles/contact.css";
 import GitHubIcon from "../assets/github_icon.svg";
 import LinkedInIcon from "../assets/linkedin_icon.svg";
 import EmailIcon from "../assets/email_icon.svg";
@@ -13,7 +12,7 @@ export default function Contact() {
         setName(e.target.value);
     };
 
-    const handleMessageInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const handleMessageInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setMessage(e.target.value);
     };
 
