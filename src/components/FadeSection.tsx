@@ -40,7 +40,7 @@ export default function FadeSection({
             id={id}
             className={`flex-start column page ${visible ? "fade-in" : ""}`}
         >
-            {visible && children}
+            {children}
         </section>
     );
 }
