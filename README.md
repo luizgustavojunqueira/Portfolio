@@ -1,5 +1,7 @@
 # Portfólio
 
+<img src="https://github.com/luizgustavojunqueira/portfolio/Portfolio.png" alt="License" />
+
 This is a repository to store my Portfólio. It is a simple project developed with ReactJS and TypeScript to show my projects, skills and talk a little about me.
 
 This project is available at [My Portfólio](https://portfolio-luizgustavojunqueiras-projects.vercel.app/).
