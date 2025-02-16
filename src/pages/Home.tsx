@@ -1,7 +1,3 @@
-import LinkedInIconLight from "../assets/linkedin_light.svg";
-import LinkedInIconDark from "../assets/linkedin_dark.svg";
-import EmailIconLight from "../assets/email_light.svg";
-import EmailIconDark from "../assets/email_dark.svg";
 import { useEffect, useState } from "react";
 
 export default function Home() {
