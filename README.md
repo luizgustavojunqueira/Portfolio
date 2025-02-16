@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a repository to store my Portfólio. It is a simple project developed with ReactJS and TypeScript to show my projects, skills and talk a little about me.
 
-Currently, two official plugins are available:
+This project is available at [My Portfólio](https://portfolio-luizgustavojunqueiras-projects.vercel.app/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
 
-## Expanding the ESLint configuration
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+I didn't use any CSS framework, I prefered to write my own CSS since it is a small project and I wanted to practice my CSS skills.
 
-- Configure the top-level `parserOptions` property like this:
+## How to run
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+To run this project you need to have Node.js installed on your machine. After that, you can clone this repository and run the following commands:
+
+```bash
+# Install dependencies
+$ npm install
+
+# Run the project
+$ npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The project will be available at `http://localhost:5173`.
