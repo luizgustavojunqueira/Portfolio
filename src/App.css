@@ -33,6 +33,7 @@
     border: 2px solid var(--light-green);
     box-shadow: 0 0 10px 0 var(--dark-green);
     transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
 }
 
 .profile_picture:hover {
@@ -87,6 +88,10 @@ a.nav {
     transition:
         color 0.3s,
         box-shadow 0.1s ease-in-out;
+
+    -webkit-transition:
+        color 0.3s,
+        box-shadow 0.1s ease-in-out;
 }
 
 a.nav:hover {
@@ -106,6 +111,7 @@ a.nav:hover {
 
 .icon {
     transition: fill 0.1s;
+    -webkit-transition: fill 0.1s;
     width: 65px;
     height: 65px;
     fill: light-dark(var(--dark-gray), var(--very-light-green));
@@ -347,6 +353,10 @@ header {
     transition:
         color 0.3s,
         background-color 0.3s;
+
+    -webkit-transition:
+        color 0.3s,
+        background-color 0.3s;
 }
 
 .project-links a:hover {
@@ -359,8 +369,8 @@ header {
 }
 
 .fade-in {
-    animation: fade-in 1s;
-    -webkit-animation: fade-in 1s;
+    animation: fade-in 0.7s;
+    -webkit-animation: fade-in 0.7s;
 }
 
 @keyframes fade-in {
