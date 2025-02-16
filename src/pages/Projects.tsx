@@ -1,5 +1,4 @@
 import ProjectItem from "../components/ProjectItem";
-import Portfolio from "../assets/Portfolio.png";
 
 export default function Projects({ lang }: { lang: "en" | "pt" }) {
     return (
