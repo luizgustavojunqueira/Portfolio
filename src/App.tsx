@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header.tsx";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
-// import Contact from "./pages/Contact";
+import Contact from "./pages/Contact";
 // import Projects from "./pages/Projects";
 
 // import ArrowTopIcon from "./assets/arrow_top_icon.png";
@@ -16,7 +16,7 @@ function App() {
                 <Home />
                 <About />
                 <Skills />
-                {/* <Contact /> */}
+                <Contact />
                 {/* <Projects /> */}
                 {/* <footer>
                     <a href="#top">

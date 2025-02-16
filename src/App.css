@@ -4,6 +4,11 @@
 
 #app {
     width: 100%;
+    scroll-behavior: smooth;
+}
+
+* {
+    scroll-behavior: smooth;
 }
 
 .page {
@@ -23,7 +28,11 @@
 }
 
 .highlight-text {
-    color: var(--light-green);
+    color: light-dark(var(--medium-green), var(--light-green));
+}
+
+.highlight-text-dark {
+    color: light-dark(var(--dark-gray), var(--medium-green));
 }
 
 .grid-two {
@@ -89,6 +98,11 @@ a.nav:hover {
     width: 65px;
     height: 65px;
     fill: light-dark(var(--dark-gray), var(--very-light-green));
+    transition: fill 0.3s;
+}
+
+.icon:hover {
+    fill: light-dark(var(--medium-green), var(--medium-green));
 }
 
 .large {
@@ -116,8 +130,8 @@ a.nav:hover {
 }
 
 .content-container {
-    margin-left: 7rem;
-    margin-right: 7rem;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 .content {
@@ -126,6 +140,11 @@ a.nav:hover {
 
 .content * {
     margin: 10px;
+}
+
+.about-content p {
+    margin-left: 7rem;
+    margin-right: 7rem;
 }
 
 .skill-item {
@@ -146,4 +165,60 @@ a.nav:hover {
 
 .skill-item:hover {
     background-color: light-dark(var(--medium-green), var(--dark-gray));
+}
+
+.contact-item {
+    min-width: 75%;
+    border-radius: 15px;
+    padding: 10px;
+
+    min-height: 40vh;
+}
+
+.form {
+    background-color: light-dark(var(--medium-green), var(--medium-gray));
+}
+
+.width-100 {
+    width: 100%;
+}
+
+input {
+    min-height: 2rem;
+    background-color: light-dark(var(--very-light-green), var(--dark-gray));
+    border: 1px solid light-dark(var(--dark-gray), var(--very-light-green));
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px 0;
+
+    padding: 5px;
+}
+
+.message {
+    min-height: 10rem;
+}
+
+button {
+    background-color: light-dark(var(--medium-green), var(--medium-gray));
+    color: light-dark(var(--dark-gray), var(--very-light-green));
+    border: none;
+
+    border-radius: 10px;
+    padding: 10px;
+
+    margin: 10px 0;
+
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: light-dark(var(--dark-green), var(--dark-gray));
+}
+
+.contact {
+    height: 90vh;
+}
+
+.contact-icons {
+    margin: 2rem 0;
 }

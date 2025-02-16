@@ -17,7 +17,7 @@ export default function Skills() {
     return (
         <section id="skills" className="page flex-start column">
             <section className="flex-start row page-header">
-                <h2 className="small">About</h2>
+                <h2 className="small">Skills</h2>
             </section>
             <section className="flex-center column content-container">
                 <section className="flex-center">

@@ -10,7 +10,7 @@ export default function About() {
                     <h3 className="highlight-text-dark large">Who I am</h3>
                 </section>
 
-                <section className="flex-start column medium content">
+                <section className="about-content flex-start column medium content">
                     <p>
                         Hello! My name is Luiz Gustavo S. S. Junqueira. I am a
                         20-year-old Computer Science student at the Federal
