@@ -2,12 +2,12 @@ export default function About() {
     return (
         <section id="about" className="flex-start column page">
             <section className="flex-start row page-header">
-                <h2 className="small">About</h2>
+                <h2 className="small highlight-text-dark">About</h2>
             </section>
 
             <section className="flex-center column content-container">
                 <section className="flex-center">
-                    <h3 className="highlight-text-dark large">Who I am</h3>
+                    <h3 className="highlight-text large">Who I am</h3>
                 </section>
 
                 <section className="about-content flex-start column medium content">

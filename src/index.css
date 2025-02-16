@@ -38,4 +38,26 @@ body {
     background-color: light-dark(var(--very-light-green), var(--dark-gray));
     color: light-dark(var(--dark-gray), var(--very-light-green));
     font-size: 1.2rem;
+
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #222629;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #87c333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2eba18;
 }

@@ -17,14 +17,14 @@ export default function Skills() {
     return (
         <section id="skills" className="page flex-start column">
             <section className="flex-start row page-header">
-                <h2 className="small">Skills</h2>
+                <h2 className="small highlight-text-dark">Skills</h2>
             </section>
             <section className="flex-center column content-container">
                 <section className="flex-center">
-                    <h3 className="highlight-text-dark large">What I can do</h3>
+                    <h3 className="highlight-text large">What I can do</h3>
                 </section>
 
-                <section className="flex-center row">
+                <section className="flex-center row skills">
                     <SkillItem image={javaScript} name={"JavaScript"} />
                     <SkillItem image={typeScript} name={"TypeScript"} />
                     <SkillItem image={python} name={"Python"} />

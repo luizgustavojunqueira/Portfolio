@@ -9,10 +9,14 @@
 
 * {
     scroll-behavior: smooth;
+    transition:
+        background-color,
+        color 0.7s;
 }
 
 .page {
     min-height: 100vh;
+    min-width: 100vw;
 }
 
 .profile_picture {
@@ -27,27 +31,22 @@
     transform: scale(1.1);
 }
 
-.highlight-text {
-    color: light-dark(var(--medium-green), var(--light-green));
-}
-
-.highlight-text-dark {
-    color: light-dark(var(--dark-gray), var(--medium-green));
-}
-
 .grid-two {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     width: 100%;
+    height: 100%;
 }
 
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-
     flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
 }
 
 .flex-start {
@@ -55,6 +54,9 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
 }
 
 .row {
@@ -98,7 +100,6 @@ a.nav:hover {
     width: 65px;
     height: 65px;
     fill: light-dark(var(--dark-gray), var(--very-light-green));
-    transition: fill 0.3s;
 }
 
 .icon:hover {
@@ -126,7 +127,6 @@ a.nav:hover {
 
 .page-header h2 {
     padding: 10px 20px;
-    color: var(--light-green);
 }
 
 .content-container {
@@ -147,15 +147,25 @@ a.nav:hover {
     margin-right: 7rem;
 }
 
+.skills {
+    width: fit-content;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
 .skill-item {
     background-color: light-dark(var(--very-light-green), var(--medium-gray));
 
     margin: 10px;
     padding: 10px;
     min-width: 15%;
+    max-width: 20%;
+    min-height: 110px;
 
     border-radius: 5px;
-    transition: background-color 0.3s;
+
+    text-align: center;
+    text-wrap: wrap;
 }
 
 .icon-img {
@@ -168,34 +178,39 @@ a.nav:hover {
 }
 
 .contact-item {
-    min-width: 75%;
+    max-width: 65%;
+    max-height: 65%;
     border-radius: 15px;
-    padding: 10px;
+    padding: 2rem;
 
-    min-height: 40vh;
-}
-
-.form {
     background-color: light-dark(var(--medium-green), var(--medium-gray));
 }
 
-.width-100 {
-    width: 100%;
+.contact-item-header {
+    margin-bottom: 1rem;
 }
 
-input {
-    min-height: 2rem;
+.form {
+    width: 100%;
+    height: 80%;
+    background-color: light-dark(var(--medium-green), var(--medium-gray));
+
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+
+    gap: 10px;
+}
+
+input,
+textarea {
     background-color: light-dark(var(--very-light-green), var(--dark-gray));
     border: 1px solid light-dark(var(--dark-gray), var(--very-light-green));
     border-radius: 10px;
-    width: 90%;
-    margin: 10px 0;
 
-    padding: 5px;
-}
+    width: 100%;
+    height: 90%;
 
-.message {
-    min-height: 10rem;
+    resize: none;
 }
 
 button {
@@ -204,11 +219,6 @@ button {
     border: none;
 
     border-radius: 10px;
-    padding: 10px;
-
-    margin: 10px 0;
-
-    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -216,9 +226,26 @@ button:hover {
 }
 
 .contact {
-    height: 90vh;
+    min-height: 90vh;
 }
 
 .contact-icons {
-    margin: 2rem 0;
+    max-height: 80%;
+}
+
+.contact-item span {
+    width: 100%;
+    height: 30%;
+}
+
+.highlight-text {
+    color: light-dark(var(--medium-green), var(--light-green));
+}
+
+.highlight-text-dark {
+    color: light-dark(var(--dark-gray), var(--dark-green));
+}
+
+header {
+    width: fit-content;
 }

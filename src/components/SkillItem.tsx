@@ -7,9 +7,7 @@ export default function SkillItem({
 }) {
     return (
         <section className="flex-center column skill-item">
-            <section className="flex-center column icon">
-                <img className="icon-img" src={image} alt="" />
-            </section>
+            <img className="icon-img" src={image} alt="" />
             <p>{name}</p>
         </section>
     );
