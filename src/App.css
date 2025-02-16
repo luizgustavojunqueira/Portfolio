@@ -9,9 +9,11 @@
 
 * {
     scroll-behavior: smooth;
-    transition:
-        background-color,
-        color 0.7s;
+    transition: color 0.7s;
+    transition: background-color 0.3s;
+    transition: border-color 0.3s;
+    transition: box-shadow 0.3s;
+    transition: fill 0.3s;
 }
 
 .page {
@@ -142,6 +144,12 @@ a.nav:hover {
     margin: 10px;
 }
 
+p,
+span,
+h1 {
+    color: light-dark(var(--dark-gray), var(--very-light-green));
+}
+
 .about-content p {
     margin-left: 7rem;
     margin-right: 7rem;
@@ -154,7 +162,7 @@ a.nav:hover {
 }
 
 .skill-item {
-    background-color: light-dark(var(--very-light-green), var(--medium-gray));
+    background-color: light-dark(var(--medium-green), var(--medium-gray));
 
     margin: 10px;
     padding: 10px;
@@ -174,7 +182,7 @@ a.nav:hover {
 }
 
 .skill-item:hover {
-    background-color: light-dark(var(--medium-green), var(--dark-gray));
+    background-color: light-dark(var(--very-light-green), var(--dark-gray));
 }
 
 .contact-item {
@@ -238,6 +246,10 @@ button:hover {
     height: 30%;
 }
 
+.contact-icons .icon:hover {
+    fill: light-dark(var(--very-light-green), var(--medium-green));
+}
+
 .highlight-text {
     color: light-dark(var(--medium-green), var(--light-green));
 }
@@ -261,4 +273,16 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.arrow-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.arrow-top .icon {
+    width: 30px;
+    height: 30px;
 }
