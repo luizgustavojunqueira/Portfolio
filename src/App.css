@@ -369,18 +369,22 @@ header {
         position: relative;
         top: 5rem;
         left: 5rem;
-
-        -webkit-opacity: 0;
-        -webkit-position: relative;
-        -webkit-top: 5rem;
-        -webkit-left: 5rem;
     }
     to {
         opacity: 100;
         position: relative;
         top: 0;
         left: 0;
-
+    }
+}
+@-webkit-keyframes fade-in {
+    from {
+        -webkit-opacity: 0;
+        -webkit-position: relative;
+        -webkit-top: 5rem;
+        -webkit-left: 5rem;
+    }
+    to {
         -webkit-opacity: 100;
         -webkit-position: relative;
         -webkit-top: 0;
