@@ -13,15 +13,21 @@ import linux from "../assets/linux_icon.svg";
 import bash from "../assets/bash_icon.svg";
 import SkillItem from "../components/SkillItem";
 
-export default function Skills() {
+export default function Skills({ lang }: { lang: "en" | "pt" }) {
     return (
         <section id="skills" className="page flex-start column">
             <section className="flex-start row page-header">
-                <h2 className="small highlight-text-dark">Skills</h2>
+                <h2 className="small highlight-text-dark">
+                    {lang === "pt" ? "Habilidades" : "Skills"}
+                </h2>
             </section>
             <section className="flex-center column content-container">
                 <section className="flex-center">
-                    <h3 className="highlight-text large">What I can do</h3>
+                    <h3 className="highlight-text large">
+                        {lang === "pt"
+                            ? "O que eu posso fazer"
+                            : "What I can do"}
+                    </h3>
                 </section>
 
                 <section className="flex-center row skills">

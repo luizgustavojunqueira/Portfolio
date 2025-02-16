@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Home() {
+export default function Home({ lang }: { lang: "en" | "pt" }) {
     const subTitleOptions = [
         "Fullstack Developer",
         "Robotics Enthusiast",
@@ -10,11 +10,22 @@ export default function Home() {
         "Open Source Enthusiast",
     ];
 
+    const subTitleOptionsPt = [
+        "Desenvolvedor Fullstack",
+        "Entusiasta de Robótica",
+        "Entusiasta de Automação",
+        "Desenvolvedor de Software",
+        "Estudante de Ciência da Computação",
+        "Entusiasta de Código Aberto",
+    ];
+
     const [subTitle, setSubTitle] = useState("");
     const [subTitleIndex, setSubTitleIndex] = useState(0);
 
     const [nextSubTitle, setNextSubTitle] = useState(
-        subTitleOptions[subTitleIndex],
+        lang === "pt"
+            ? subTitleOptionsPt[subTitleIndex]
+            : subTitleOptions[subTitleIndex],
     );
 
     const [timeoutTime, setTimeoutTime] = useState(75);
@@ -32,7 +43,11 @@ export default function Home() {
                 setSubTitleIndex((subTitleIndex + 1) % subTitleOptions.length);
                 setSubTitle(" ");
                 setWriting(true);
-                setNextSubTitle(subTitleOptions[subTitleIndex]);
+                setNextSubTitle(
+                    lang === "pt"
+                        ? subTitleOptionsPt[subTitleIndex]
+                        : subTitleOptions[subTitleIndex],
+                );
                 return;
             }
             setSubTitle(removeLastChar(subTitle));
@@ -67,13 +82,15 @@ export default function Home() {
                 <section className="flex-start row">
                     <section className="column margin-10">
                         <h1 className="large">
-                            <span className="highlight-text">Hello!&nbsp;</span>
-                            I'm Luiz Gustavo
+                            <span className="highlight-text">
+                                {lang == "pt" ? "Olá" : "Hello"}!&nbsp;
+                            </span>
+                            {lang == "pt" ? "Eu sou" : "I'm"} Luiz Gustavo.
                         </h1>
                         <section className="medium">
                             <span>{"<"}</span>
                             <span className="highlight-text">{`${subTitle.split(" ")[0]}`}</span>
-                            <span>{` ${subTitle.split(" ")[1] || ""}/>`}</span>
+                            <span>{` ${subTitle.split(subTitle.split(" ")[0])[1] || ""}/>`}</span>
                         </section>
                         <span>
                             <a

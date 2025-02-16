@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Contact() {
+export default function Contact({ lang }: { lang: "en" | "pt" }) {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
 
@@ -8,7 +8,7 @@ export default function Contact() {
         setName(e.target.value);
     };
 
-    const handleMessageInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleMessageInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setMessage(e.target.value);
     };
 
@@ -20,30 +20,44 @@ export default function Contact() {
     return (
         <section id="contact" className="page flex-start column">
             <section className="row page-header">
-                <h2 className="small highlight-text-dark">Contact</h2>
+                <h2 className="small highlight-text-dark">
+                    {lang === "pt" ? "Contato" : "Contact"}
+                </h2>
             </section>
 
             <section className="flex-center column content-container">
                 <section className="flex-center">
-                    <h3 className="highlight-text large">Get in touch</h3>
+                    <h3 className="highlight-text large">
+                        {lang === "pt" ? "Fale Comigo" : "Get in touch"}
+                    </h3>
                 </section>
 
                 <section className="grid-two contact ">
                     <section className="flex-center column ">
                         <section className="flex-start column contact-item">
                             <section className="medium highlight-text-dark contact-item-header">
-                                <h4> Send me an e-mail </h4>
+                                <h4>
+                                    {lang === "pt"
+                                        ? "Me mande um email"
+                                        : "Send me an email"}
+                                </h4>
                             </section>
                             <section className="form">
                                 <input
                                     className="small"
                                     type="text"
-                                    placeholder="Your name"
+                                    placeholder={
+                                        lang === "pt" ? "Seu nome" : "Your name"
+                                    }
                                     onChange={(e) => handleNameInput(e)}
                                 />
                                 <textarea
                                     className="small "
-                                    placeholder="Your message"
+                                    placeholder={
+                                        lang === "pt"
+                                            ? "Sua mensagem"
+                                            : "Your message"
+                                    }
                                     onChange={(e) => handleMessageInput(e)}
                                 ></textarea>
 
@@ -51,7 +65,7 @@ export default function Contact() {
                                     className="small"
                                     onClick={(e) => sendEmail(e)}
                                 >
-                                    Send Message
+                                    {lang === "pt" ? "Enviar" : "Send"}
                                 </button>
                             </section>
                         </section>
@@ -60,7 +74,12 @@ export default function Contact() {
                     <section className="flex-center column ">
                         <section className="flex-start column contact-item">
                             <section className="medium highlight-text-dark contact-item-header ">
-                                <h4> Or reach me out on social media </h4>
+                                <h4>
+                                    {" "}
+                                    {lang === "pt"
+                                        ? "Redes Sociais"
+                                        : "Socials"}{" "}
+                                </h4>
                             </section>
 
                             <section className="flex-start column contact-icons">
