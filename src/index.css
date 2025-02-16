@@ -19,12 +19,13 @@
 
     color-scheme: light dark;
 
+    --very-light-green: #d5ebdb;
     --light-green: #87c333;
+    --medium-green: #85bf7c;
     --dark-green: #2eba18;
     --dark-gray: #222629;
     --light-gray: #6b6e70;
     --medium-gray: #333940;
-    --very-light-green: #d5ebdb;
     --white: #fff;
 }
 

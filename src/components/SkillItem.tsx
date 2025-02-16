@@ -6,11 +6,11 @@ export default function SkillItem({
     name: string;
 }) {
     return (
-        <div className="item">
-            <div className="icon">
-                <img src={image} alt="" />
-            </div>
+        <section className="flex-center column skill-item">
+            <section className="flex-center column icon">
+                <img className="icon-img" src={image} alt="" />
+            </section>
             <p>{name}</p>
-        </div>
+        </section>
     );
 }

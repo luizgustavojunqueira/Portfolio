@@ -2,7 +2,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Header from "./components/Header.tsx";
 import About from "./pages/About";
-// import Skills from "./pages/Skills";
+import Skills from "./pages/Skills";
 // import Contact from "./pages/Contact";
 // import Projects from "./pages/Projects";
 
@@ -15,7 +15,7 @@ function App() {
                 <Header />
                 <Home />
                 <About />
-                {/* <Skills /> */}
+                <Skills />
                 {/* <Contact /> */}
                 {/* <Projects /> */}
                 {/* <footer>

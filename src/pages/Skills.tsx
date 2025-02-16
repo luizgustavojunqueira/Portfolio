@@ -15,16 +15,16 @@ import SkillItem from "../components/SkillItem";
 
 export default function Skills() {
     return (
-        <section id="skills" className="page dark_gray_bg">
-            <header className="page_header">
-                <h2 className="dark_green">Skills</h2>
-            </header>
-
-            <section className="page_content">
-                <section className="page_title">
-                    <h3 className="light_green">What I can do</h3>
+        <section id="skills" className="page flex-start column">
+            <section className="flex-start row page-header">
+                <h2 className="small">About</h2>
+            </section>
+            <section className="flex-center column content-container">
+                <section className="flex-center">
+                    <h3 className="highlight-text-dark large">What I can do</h3>
                 </section>
-                <div className="skills_container">
+
+                <section className="flex-center row">
                     <SkillItem image={javaScript} name={"JavaScript"} />
                     <SkillItem image={typeScript} name={"TypeScript"} />
                     <SkillItem image={python} name={"Python"} />
@@ -38,7 +38,7 @@ export default function Skills() {
                     <SkillItem image={docker} name={"Docker"} />
                     <SkillItem image={linux} name={"Linux"} />
                     <SkillItem image={bash} name={"Bash"} />
-                </div>
+                </section>
             </section>
         </section>
     );
