@@ -23,15 +23,6 @@ function Header({
                 >
                     {theme === "dark" ? "Light" : "Dark"} Mode
                 </button>
-
-                <button
-                    className="toggle"
-                    onClick={() =>
-                        setLang((lang) => (lang === "en" ? "pt" : "en"))
-                    }
-                >
-                    {lang === "en" ? "PT" : "EN"}
-                </button>
             </section>
             <section className="flex-center ">
                 <a className="nav" href="#home">
@@ -49,6 +40,17 @@ function Header({
                 <a className="nav" href="#contact">
                     <p>{lang == "pt" ? "Contato" : "Contact"} </p>
                 </a>
+            </section>
+
+            <section className="toggle-buttons row ">
+                <button
+                    className="toggle"
+                    onClick={() =>
+                        setLang((lang) => (lang === "en" ? "pt" : "en"))
+                    }
+                >
+                    {lang === "en" ? "PT" : "EN"}
+                </button>
             </section>
         </header>
     );

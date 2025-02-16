@@ -79,8 +79,8 @@ export default function Home({ lang }: { lang: "en" | "pt" }) {
                         src="https://avatars.githubusercontent.com/u/66537057?v=4"
                     />
                 </section>
-                <section className="flex-start row">
-                    <section className="column margin-10">
+                <section className="flex-start row home-content">
+                    <section className="flex-center column margin-10">
                         <h1 className="large">
                             <span className="highlight-text">
                                 {lang == "pt" ? "Olá" : "Hello"}!&nbsp;
