@@ -1,6 +1,6 @@
 # Portfólio
 
-<img src="https://github.com/luizgustavojunqueira/portfolio/Portfolio.png" alt="License" />
+<img src="https://github.com/luizgustavojunqueira/Portfolio/blob/main/Portfolio.png"  />
 
 This is a repository to store my Portfólio. It is a simple project developed with ReactJS and TypeScript to show my projects, skills and talk a little about me.
 
