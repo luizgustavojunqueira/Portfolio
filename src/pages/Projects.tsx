@@ -2,7 +2,7 @@ import ProjectItem from "../components/ProjectItem";
 
 export default function Projects({ lang }: { lang: "en" | "pt" }) {
     return (
-        <section id="projects" className="page flex-start column">
+        <>
             <section className="flex-start row page-header">
                 <h2 className="small highlight-text-dark">
                     {lang === "pt" ? "Projetos" : "Projects"}
@@ -33,6 +33,6 @@ A personal portfolio made with ReactJS and CSS, where I talk a little about myse
                     />
                 </section>
             </section>
-        </section>
+        </>
     );
 }
