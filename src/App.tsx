@@ -5,9 +5,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import { useEffect, useState } from "react";
-// import Projects from "./pages/Projects";
-
-// import ArrowTopIcon from "./assets/arrow_top_icon.png";
+import Projects from "./pages/Projects";
 
 type Theme = "dark" | "light";
 
@@ -30,8 +28,8 @@ function App() {
                 <Home lang={lang} />
                 <About lang={lang} />
                 <Skills lang={lang} />
+                <Projects lang={lang} />
                 <Contact lang={lang} />
-                {/* <Projects /> */}
             </main>
             <a href="#app" className="arrow-top">
                 <svg

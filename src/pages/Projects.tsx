@@ -1,27 +1,37 @@
 import ProjectItem from "../components/ProjectItem";
+import Portfolio from "../assets/Portfolio.png";
 
-export default function Projects() {
+export default function Projects({ lang }: { lang: "en" | "pt" }) {
     return (
-        <section>
-            <section className="page dark_gray_bg">
-                <header>
-                    <h2 className="dark_green">Projects</h2>
-                </header>
-
-                <section className="projects_content">
-                    <section className="projects_header">
-                        <h3 className="light_green">What I have done</h3>
-                    </section>
-
-                    <section>
-                        <ProjectItem
-                            name="Project 1"
-                            description="Description 1"
-                            image=""
-                            link=""
-                            tecnologies=""
-                        />
-                    </section>
+        <section id="projects" className="page flex-start column">
+            <section className="flex-start row page-header">
+                <h2 className="small highlight-text-dark">
+                    {lang === "pt" ? "Projetos" : "Projects"}
+                </h2>
+            </section>
+            <section className="flex-start no-wrap column content-container">
+                <section className="flex-center">
+                    <h3 className="highlight-text large">
+                        {lang === "pt" ? "O que eu já fiz" : "What I have done"}
+                    </h3>
+                </section>
+                <section className="flex-center row projects">
+                    <ProjectItem
+                        lang={lang}
+                        name={lang === "pt" ? "Portfólio" : "Portfolio"}
+                        description={
+                            lang === "pt"
+                                ? `
+Um portfólio pessoal feito com ReactJS e CSS, onde falo um pouco sobre mim e mostro alguns dos meus projetos.
+`
+                                : `
+A personal portfolio made with ReactJS and CSS, where I talk a little about myself and show some of my projects.
+`
+                        }
+                        image="https://raw.githubusercontent.com/luizgustavojunqueira/Portfolio/refs/heads/main/Portfolio.png"
+                        repo="https://github.com/luizgustavojunqueira/portfolio"
+                        link="https://portfolio-luizgustavojunqueiras-projects.vercel.app/"
+                    />
                 </section>
             </section>
         </section>

@@ -21,7 +21,7 @@ export default function Skills({ lang }: { lang: "en" | "pt" }) {
                     {lang === "pt" ? "Habilidades" : "Skills"}
                 </h2>
             </section>
-            <section className="flex-center column content-container">
+            <section className="flex-start column content-container">
                 <section className="flex-center">
                     <h3 className="highlight-text large">
                         {lang === "pt"

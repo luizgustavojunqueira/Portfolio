@@ -2,27 +2,46 @@ export default function ProjectItem({
     name,
     description,
     image,
+    repo,
     link,
-    tecnologies,
+    lang,
 }: {
     name: string;
     description: string;
     image: string;
-    link: string;
-    tecnologies: string;
+    repo?: string | undefined;
+    link?: string | undefined;
+    lang: "en" | "pt";
 }) {
     return (
-        <section className="project_item">
-            <section className="project_image">
-                <img src={image} alt="" />
-            </section>
-            <section className="project_description">
-                <h3>{name}</h3>
+        <section className="flex-center column project-item">
+            <img src={image} alt={name} />
+            <section className="flex-center column">
+                <h3 className="medium highlight-text-dark">{name}</h3>
                 <p>{description}</p>
-                <p>{tecnologies}</p>
-                <a href={link} target="_blank" rel="noreferrer">
-                    Link
-                </a>
+                <section className="flex-center no-wrap row project-links">
+                    {repo != undefined && (
+                        <a
+                            className="flex-center"
+                            href={repo}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            {lang === "pt" ? "Repositório" : "Repository"}
+                        </a>
+                    )}
+
+                    {link != undefined && (
+                        <a
+                            className="flex-center"
+                            href={link}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            {lang === "pt" ? "Ver Projeto" : "View Project"}
+                        </a>
+                    )}
+                </section>
             </section>
         </section>
     );
