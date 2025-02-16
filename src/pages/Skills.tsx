@@ -1,4 +1,3 @@
-import "../styles/skills.css";
 import javaScript from "../assets/javascript_icon.svg";
 import typeScript from "../assets/typescript_icon.svg";
 import python from "../assets/python_icon.svg";
@@ -14,18 +13,24 @@ import linux from "../assets/linux_icon.svg";
 import bash from "../assets/bash_icon.svg";
 import SkillItem from "../components/SkillItem";
 
-export default function Skills() {
+export default function Skills({ lang }: { lang: "en" | "pt" }) {
     return (
-        <section id="skills" className="page dark_gray_bg">
-            <header className="page_header">
-                <h2 className="dark_green">Skills</h2>
-            </header>
-
-            <section className="page_content">
-                <section className="page_title">
-                    <h3 className="light_green">What I can do</h3>
+        <section id="skills" className="page flex-start column">
+            <section className="flex-start row page-header">
+                <h2 className="small highlight-text-dark">
+                    {lang === "pt" ? "Habilidades" : "Skills"}
+                </h2>
+            </section>
+            <section className="flex-center column content-container">
+                <section className="flex-center">
+                    <h3 className="highlight-text large">
+                        {lang === "pt"
+                            ? "O que eu posso fazer"
+                            : "What I can do"}
+                    </h3>
                 </section>
-                <div className="skills_container">
+
+                <section className="flex-center row skills">
                     <SkillItem image={javaScript} name={"JavaScript"} />
                     <SkillItem image={typeScript} name={"TypeScript"} />
                     <SkillItem image={python} name={"Python"} />
@@ -39,7 +44,7 @@ export default function Skills() {
                     <SkillItem image={docker} name={"Docker"} />
                     <SkillItem image={linux} name={"Linux"} />
                     <SkillItem image={bash} name={"Bash"} />
-                </div>
+                </section>
             </section>
         </section>
     );
