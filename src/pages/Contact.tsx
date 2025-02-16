@@ -25,7 +25,7 @@ export default function Contact({ lang }: { lang: "en" | "pt" }) {
                 </h2>
             </section>
 
-            <section className="flex-center column content-container">
+            <section className="flex-start no-wrap column content-container">
                 <section className="flex-center">
                     <h3 className="highlight-text large">
                         {lang === "pt" ? "Fale Comigo" : "Get in touch"}

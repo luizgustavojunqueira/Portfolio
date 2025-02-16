@@ -29,7 +29,7 @@
 }
 
 .profile_picture:hover {
-    transform: scale(1.1);
+    transform: scale(1.05) rotate(5deg);
 }
 
 .grid-two {
@@ -134,6 +134,7 @@ a.nav:hover {
 .content-container {
     max-width: 100%;
     min-width: 100%;
+    min-height: 90vh;
 }
 
 .content {
@@ -285,4 +286,63 @@ header {
 .arrow-top .icon {
     width: 30px;
     height: 30px;
+}
+
+.projects {
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.project-item {
+    min-height: fit-content;
+    width: 25%;
+    background-color: light-dark(var(--medium-green), var(--medium-gray));
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+
+    text-align: center;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+}
+
+.project-item img {
+    min-width: 95%;
+    max-width: 95%;
+    max-height: 90%;
+}
+
+.project-item h3 {
+    margin: 1rem 0;
+}
+
+.project-links {
+    margin-top: 1rem;
+
+    border-radius: 10px;
+    height: 4rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: light-dark(var(--dark-gray), var(--very-light-green));
+    background-color: light-dark(var(--very-light-green), var(--dark-gray));
+    border-radius: 10px;
+
+    margin: 0 0.7rem;
+
+    transition:
+        color 0.3s,
+        background-color 0.3s;
+}
+
+.project-links a:hover {
+    color: light-dark(var(--dark-gray), var(--very-light-green));
+    background-color: color-mix(
+        in oklab,
+        light-dark(var(--dark-green), var(--light-green)) 32%,
+        light-dark(var(--light-gray), var(--dark-gray)) 72%
+    );
 }
