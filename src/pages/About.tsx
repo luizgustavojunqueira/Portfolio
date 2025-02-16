@@ -1,6 +1,6 @@
 export default function About({ lang }: { lang: "en" | "pt" }) {
     return (
-        <section id="about" className="flex-start column page">
+        <>
             <section className="flex-start row page-header">
                 <h2 className="small highlight-text-dark">
                     {lang === "pt" ? "Sobre Mim" : "About Me"}
@@ -67,6 +67,6 @@ in my projects.
                     </p>
                 </section>
             </section>
-        </section>
+        </>
     );
 }

@@ -346,3 +346,22 @@ header {
         light-dark(var(--light-gray), var(--dark-gray)) 72%
     );
 }
+
+.fade-in {
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 5rem;
+        left: 5rem;
+    }
+    to {
+        opacity: 100;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}

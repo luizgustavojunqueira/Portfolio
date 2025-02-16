@@ -18,7 +18,7 @@ export default function Contact({ lang }: { lang: "en" | "pt" }) {
     };
 
     return (
-        <section id="contact" className="page flex-start column">
+        <>
             <section className="row page-header">
                 <h2 className="small highlight-text-dark">
                     {lang === "pt" ? "Contato" : "Contact"}
@@ -142,6 +142,6 @@ export default function Contact({ lang }: { lang: "en" | "pt" }) {
                     </section>
                 </section>
             </section>
-        </section>
+        </>
     );
 }

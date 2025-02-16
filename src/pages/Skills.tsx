@@ -15,7 +15,7 @@ import SkillItem from "../components/SkillItem";
 
 export default function Skills({ lang }: { lang: "en" | "pt" }) {
     return (
-        <section id="skills" className="page flex-start column">
+        <>
             <section className="flex-start row page-header">
                 <h2 className="small highlight-text-dark">
                     {lang === "pt" ? "Habilidades" : "Skills"}
@@ -46,6 +46,6 @@ export default function Skills({ lang }: { lang: "en" | "pt" }) {
                     <SkillItem image={bash} name={"Bash"} />
                 </section>
             </section>
-        </section>
+        </>
     );
 }
