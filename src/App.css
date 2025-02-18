@@ -311,8 +311,9 @@ header {
 }
 
 .project-item {
-    min-height: fit-content;
-    width: 25%;
+    min-height: 600px;
+    max-height: 600px;
+    width: 29%;
     background-color: light-dark(var(--medium-green), var(--medium-gray));
     border-radius: 10px;
     margin: 10px;
@@ -328,7 +329,14 @@ header {
 .project-item img {
     min-width: 95%;
     max-width: 95%;
-    max-height: 90%;
+    height: 250px;
+
+    border-radius: 10px;
+}
+
+.project-item p {
+    min-height: 125px;
+    padding: 10px;
 }
 
 .project-item h3 {
@@ -426,6 +434,12 @@ header {
     input,
     textarea {
         min-height: 50px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .project-item {
+        width: 45%;
     }
 }
 
