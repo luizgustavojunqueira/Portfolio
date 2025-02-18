@@ -27,9 +27,24 @@ Um portfólio pessoal feito com ReactJS e CSS, onde falo um pouco sobre mim e mo
 A personal portfolio made with ReactJS and CSS, where I talk a little about myself and show some of my projects.
 `
                         }
-                        image="https://raw.githubusercontent.com/luizgustavojunqueira/Portfolio/refs/heads/main/Portfolio.png"
+                        image="https://raw.githubusercontent.com/luizgustavojunqueira/Portfolio/refs/heads/main/Images/Portfolio.png"
                         repo="https://github.com/luizgustavojunqueira/portfolio"
                         link="https://portfolio-luizgustavojunqueiras-projects.vercel.app/"
+                    />
+
+                    <ProjectItem
+                        lang={lang}
+                        name={"EcoGIS"}
+                        description={
+                            lang === "pt"
+                                ? `
+Projeto de pesquisa e extensão no Laboratório de Engenharia de Software, da UFMS, para monitoramento e gestão dos biomas do Brasil, por meio da ferramenta WebGis
+`
+                                : `
+Research and extension project at the Software Engineering Laboratory, UFMS, for monitoring and management of the biomes of Brazil, through the WebGis tool 
+`
+                        }
+                        image="https://raw.githubusercontent.com/luizgustavojunqueira/Portfolio/refs/heads/main/ecogis.png"
                     />
                 </section>
             </section>
