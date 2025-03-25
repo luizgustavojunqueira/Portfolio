@@ -8,6 +8,7 @@ export default function Projects({ lang }: { lang: "en" | "pt" }) {
                     {lang === "pt" ? "Projetos" : "Projects"}
                 </h2>
             </section>
+
             <section className="flex-start no-wrap column content-container">
                 <section className="flex-center">
                     <h3 className="highlight-text large">
