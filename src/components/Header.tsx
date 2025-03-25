@@ -16,6 +16,16 @@ function Header({
 
     const { width } = useScreenSize();
 
+    const navigate = (to: string) => {
+        setNavOpen(false);
+        setTimeout(() => {
+            const section = document.querySelector(to);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 250);
+    };
+
     return (
         <header className="flex flex-col bg-slate-100 dark:bg-darkgray dark:text-verylightgreen text-black text-md md:grid md:grid-cols-[2fr_6fr_2fr] md:items-center transition-colors">
             <section className="w-full flex flex-row justify-center border-b-2 border-slate-300 md:border-b-0 md:w-auto md:col-start-3 md:col-span-1">
@@ -283,17 +293,19 @@ function Header({
             <section
                 className={`transition-all duration-200 ease-in-out overflow-hidden flex flex-col w-full justify-center items-center text-center gap-2 font-semibold  border-slate-200 dark:border-darkgray md:flex-row md:border-none md:gap-5 md:col-start-2 md:row-start-1 h-full  ${navOpen || width > 767 ? " max-h-96 border-b-2 " : " max-h-0  border-none"}`}
             >
-                <Link to="#home">Home</Link>
-                <Link to="#about">
+                <Link to="#home" onClick={navigate}>
+                    Home
+                </Link>
+                <Link to="#about" onClick={navigate}>
                     {lang === "pt" ? "Sobre Mim" : "About Me"}
                 </Link>
-                <Link to="#skills">
+                <Link to="#skills" onClick={navigate}>
                     {lang === "pt" ? "Habilidades" : "Skills"}
                 </Link>
-                <Link to="#projects">
+                <Link to="#projects" onClick={navigate}>
                     {lang === "pt" ? "Projetos" : "Projects"}
                 </Link>
-                <Link to="#contact">
+                <Link to="#contact" onClick={navigate}>
                     {lang === "pt" ? "Contato" : "Contact"}
                 </Link>
             </section>
