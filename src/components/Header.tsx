@@ -17,7 +17,7 @@ function Header({
     const { width } = useScreenSize();
 
     return (
-        <header className="flex flex-col bg-slate-100 text-black dark:bg-darkgray dark:text-white text-md md:grid md:grid-cols-[2fr_6fr_2fr] md:items-center transition-colors">
+        <header className="flex flex-col bg-slate-100 dark:bg-darkgray dark:text-verylightgreen text-black text-md md:grid md:grid-cols-[2fr_6fr_2fr] md:items-center transition-colors">
             <section className="w-full flex flex-row justify-center border-b-2 border-slate-300 md:border-b-0 md:w-auto md:col-start-3 md:col-span-1">
                 <section className="flex flex-row justify-between w-full md:hidden m-2 ">
                     <button

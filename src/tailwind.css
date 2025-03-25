@@ -8,3 +8,12 @@
     --color-verylightgreen: #d5ebdb;
     --font-roboto: "Roboto", sans-serif;
 }
+
+@layer components {
+    .page-header {
+        @apply w-full text-left text-lime-600 font-bold text-base;
+    }
+    .section-header {
+        @apply w-full text-center text-2xl text-lime-500 font-bold;
+    }
+}
