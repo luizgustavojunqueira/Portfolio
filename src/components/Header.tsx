@@ -17,13 +17,20 @@ function Header({
     const { width } = useScreenSize();
 
     const navigate = (to: string) => {
-        setNavOpen(false);
-        setTimeout(() => {
+        if (width <= 767) {
+            setNavOpen(false);
+            setTimeout(() => {
+                const section = document.querySelector(to);
+                if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 250);
+        } else {
             const section = document.querySelector(to);
             if (section) {
                 section.scrollIntoView({ behavior: "smooth" });
             }
-        }, 250);
+        }
     };
 
     return (
