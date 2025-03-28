@@ -15,37 +15,31 @@ import SkillItem from "../components/SkillItem";
 
 export default function Skills({ lang }: { lang: "en" | "pt" }) {
     return (
-        <>
-            <section className="flex-start row page-header">
-                <h2 className="small highlight-text-dark">
-                    {lang === "pt" ? "Habilidades" : "Skills"}
-                </h2>
+        <section
+            id="skills"
+            className="transition-colors flex flex-col items-center justify-start gap-4 min-h-screen bg-slate-200 dark:bg-midgray dark:text-verylightgreen text-black p-4"
+        >
+            <h2 className="page-header">
+                {lang === "pt" ? "Habilidades" : "Skills"}
+            </h2>
+            <h3 className="section-header">
+                {lang === "pt" ? "O que eu posso fazer" : "What I can do"}
+            </h3>
+            <section className="w-full flex flex-row flex-wrap justify-center gap-6 py-4 pb-8 md:px-20">
+                <SkillItem image={javaScript} name={"JavaScript"} />
+                <SkillItem image={typeScript} name={"TypeScript"} />
+                <SkillItem image={python} name={"Python"} />
+                <SkillItem image={c} name={"C"} />
+                <SkillItem image={cplusplus} name={"C++"} />
+                <SkillItem image={html} name={"HTML"} />
+                <SkillItem image={css} name={"CSS"} />
+                <SkillItem image={node} name={"NodeJS"} />
+                <SkillItem image={react} name={"ReactJS"} />
+                <SkillItem image={git} name={"Git"} />
+                <SkillItem image={docker} name={"Docker"} />
+                <SkillItem image={linux} name={"Linux"} />
+                <SkillItem image={bash} name={"Bash"} />
             </section>
-            <section className="flex-start column content-container">
-                <section className="flex-center">
-                    <h3 className="highlight-text large">
-                        {lang === "pt"
-                            ? "O que eu posso fazer"
-                            : "What I can do"}
-                    </h3>
-                </section>
-
-                <section className="flex-center row skills">
-                    <SkillItem image={javaScript} name={"JavaScript"} />
-                    <SkillItem image={typeScript} name={"TypeScript"} />
-                    <SkillItem image={python} name={"Python"} />
-                    <SkillItem image={c} name={"C"} />
-                    <SkillItem image={cplusplus} name={"C++"} />
-                    <SkillItem image={html} name={"HTML"} />
-                    <SkillItem image={css} name={"CSS"} />
-                    <SkillItem image={node} name={"NodeJS"} />
-                    <SkillItem image={react} name={"ReactJS"} />
-                    <SkillItem image={git} name={"Git"} />
-                    <SkillItem image={docker} name={"Docker"} />
-                    <SkillItem image={linux} name={"Linux"} />
-                    <SkillItem image={bash} name={"Bash"} />
-                </section>
-            </section>
-        </>
+        </section>
     );
 }
