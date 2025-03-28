@@ -6,7 +6,6 @@ import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import { useEffect, useState } from "react";
 import Projects from "./pages/Projects";
-import FadeSection from "./components/FadeSection";
 
 type Theme = "dark" | "light";
 
