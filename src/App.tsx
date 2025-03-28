@@ -14,6 +14,8 @@ function App() {
     const [theme, setTheme] = useState<Theme>("dark");
     const [lang, setLang] = useState<"en" | "pt">("en");
 
+    const [showArrow, setshowArrow] = useState<boolean>(false);
+
     const [observing, setObserving] = useState(false);
 
     useEffect(() => {
@@ -31,6 +33,20 @@ function App() {
         });
         observer.observe(document.getElementById("home") as Element);
         return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setshowArrow(true);
+            } else {
+                setshowArrow(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
@@ -61,12 +77,16 @@ function App() {
                     setTimeout(() => {
                         setObserving(true);
                     }, 750);
-                    document.location.href = "#app";
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
                 }}
-                className="arrow-top"
+                className={`fixed bottom-6 right-6 bg-slate-100 dark:bg-darkgray p-2 rounded-full transition-opacity duration-300 ${showArrow ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             >
                 <svg
-                    className="icon"
+                    className="w-8 h-8 fill-lime-500"
                     height="32px"
                     viewBox="0 0 32 32"
                     width="32px"
