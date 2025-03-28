@@ -14,8 +14,6 @@ export default function Projects({ lang }: { lang: "en" | "pt" }) {
                 {lang === "pt" ? "O que eu já fiz" : "What I have done"}
             </h3>
             <section className="w-full flex flex-row flex-wrap justify-center gap-6 py-4 pb-8 md:px-20">
-                {/* TODO Update projects */}
-
                 <ProjectItem
                     lang={lang}
                     name={lang === "pt" ? "Portfólio" : "Portfolio"}
@@ -45,7 +43,7 @@ Meu Blog pessoal feito com Golang, Templ e TailwindCSS onde escrevo sobre tecnol
 My personal Blog made with Golang, Templ and TailwindCSS where I write about technology, programming and personal projects.
 `
                     }
-                    image="https://raw.githubusercontent.com/luizgustavojunqueira/Portfolio/refs/heads/development/Images/Blog.png"
+                    image="https://raw.githubusercontent.com/luizgustavojunqueira/Portfolio/refs/heads/development/Images/Blogo.png"
                     repo="https://github.com/luizgustavojunqueira/Blogo"
                     link="https://blog.luizgustavojunqueira.com"
                 />
