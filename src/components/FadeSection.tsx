@@ -38,7 +38,8 @@ export default function FadeSection({
     return (
         <section
             id={id}
-            className={`flex-start column page ${visible ? "fade-in" : ""}`}
+            className={`w-full h-full flex flex-col justify-start transition-all duration-1000 transform 
+    ${visible ? "translate-y-0  opacity-100" : "translate-y-10 opacity-20"}`}
         >
             {children}
         </section>

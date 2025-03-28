@@ -14,7 +14,7 @@ export default function ProjectItem({
     lang: "en" | "pt";
 }) {
     return (
-        <section className="md:max-w-sm lg:max-w-md rounded-xl flex flex-col gap-0">
+        <section className="md:max-w-sm lg:max-w-sm flex flex-col gap-0">
             <img src={image} alt={name} className="rounded-t-xl" />
             <section className="flex flex-col gap-4 bg-slate-100 dark:bg-darkgray p-6">
                 <h3 className="font-bold text-xl text-emerald-600 dark:text-lime-400">

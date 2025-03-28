@@ -6,7 +6,6 @@ import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import { useEffect, useState } from "react";
 import Projects from "./pages/Projects";
-import FadeSection from "./components/FadeSection";
 
 type Theme = "dark" | "light";
 
@@ -59,18 +58,10 @@ function App() {
             />
             <Home lang={lang} />
 
-            <FadeSection id="about" observing={observing}>
-                <About lang={lang} />
-            </FadeSection>
-            <FadeSection id="skills" observing={observing}>
-                <Skills lang={lang} />
-            </FadeSection>
-            <FadeSection id="projects" observing={observing}>
-                <Projects lang={lang} />
-            </FadeSection>
-            <FadeSection id="contact" observing={observing}>
-                <Contact lang={lang} />
-            </FadeSection>
+            <About lang={lang} observing={observing} />
+            <Skills lang={lang} observing={observing} />
+            <Projects lang={lang} observing={observing} />
+            <Contact lang={lang} observing={observing} />
 
             <a
                 onClick={() => {
