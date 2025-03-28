@@ -30,7 +30,24 @@ A personal portfolio made with ReactJS and CSS, where I talk a little about myse
                     }
                     image="https://raw.githubusercontent.com/luizgustavojunqueira/Portfolio/refs/heads/development/Images/Portfolio.png"
                     repo="https://github.com/luizgustavojunqueira/portfolio"
-                    link="https://portfolio-luizgustavojunqueiras-projects.vercel.app/"
+                    link="https://portfolio.luizgustavojunqueira.com"
+                />
+
+                <ProjectItem
+                    lang={lang}
+                    name="Blog"
+                    description={
+                        lang === "pt"
+                            ? `
+Meu Blog pessoal feito com Golang, Templ e TailwindCSS onde escrevo sobre tecnologia, programação e projetos pessoais. 
+`
+                            : `
+My personal Blog made with Golang, Templ and TailwindCSS where I write about technology, programming and personal projects.
+`
+                    }
+                    image="https://raw.githubusercontent.com/luizgustavojunqueira/Portfolio/refs/heads/development/Images/Blog.png"
+                    repo="https://github.com/luizgustavojunqueira/Blogo"
+                    link="https://blog.luizgustavojunqueira.com"
                 />
 
                 <ProjectItem
