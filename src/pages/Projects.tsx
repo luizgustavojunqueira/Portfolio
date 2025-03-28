@@ -3,7 +3,7 @@ import ProjectItem from "../components/ProjectItem";
 export default function Projects({ lang }: { lang: "en" | "pt" }) {
     return (
         <section
-            id="skills"
+            id="projects"
             className="transition-colors flex flex-col items-center justify-start gap-4 min-h-screen bg-slate-200 dark:bg-midgray dark:text-verylightgreen text-black p-4"
         >
             <h2 className="page-header">
