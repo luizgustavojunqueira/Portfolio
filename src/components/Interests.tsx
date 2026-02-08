@@ -17,6 +17,11 @@ function Interests({ interests, label }: IInterests) {
   const [currentOpen, setCurrentOpen] = useState<number>(0);
   const debounceRef = useRef<number | null>(null);
 
+  const handleInteraction = (index: number) => {
+    if (debounceRef.current) window.clearTimeout(debounceRef.current);
+    debounceRef.current = window.setTimeout(() => setCurrentOpen(index), 150);
+  };
+
   return (
     <section className="w-full">
       {label && (
@@ -24,16 +29,15 @@ function Interests({ interests, label }: IInterests) {
           {label}
         </div>
       )}
-      <div className="flex h-80 border border-slate-300 dark:border-slate-700 overflow-hidden">
+      <div className="flex flex-col md:flex-row md:h-80 border border-slate-300 dark:border-slate-700 overflow-hidden">
         {interests.map((interest, index) => (
           <div
             key={interest.id}
             onMouseEnter={() => {
-              if (debounceRef.current) window.clearTimeout(debounceRef.current);
-              debounceRef.current = window.setTimeout(
-                () => setCurrentOpen(index),
-                250,
-              );
+              handleInteraction(index);
+            }}
+            onClick={() => {
+              setCurrentOpen(index);
             }}
             className={`relative overflow-hidden transition-all duration-450 ease-in-out
               ${
@@ -41,7 +45,7 @@ function Interests({ interests, label }: IInterests) {
                   ? "flex-[1_1_auto] bg-black dark:bg-white flex flex-row-reverse"
                   : "flex-[0_0_52px] min-w-13 bg-slate-100 dark:bg-slate-900"
               }
-              ${index !== interests.length - 1 ? "border-r border-slate-300 dark:border-slate-700" : ""}
+              ${index !== interests.length - 1 ? "border-b md:border-r border-slate-300 dark:border-slate-700" : ""}
             `}
           >
             <div
@@ -63,10 +67,7 @@ function Interests({ interests, label }: IInterests) {
                   )}
                 </div>
               ) : (
-                <span
-                  className="text-black dark:text-white font-semibold text-xs tracking-wide rotate-180 whitespace-nowrap"
-                  style={{ writingMode: "vertical-rl" }}
-                >
+                <span className="text-black dark:text-white font-semibold text-xs tracking-wide md:rotate-180 whitespace-nowrap [writing-mode:horizontal-tb] md:[writing-mode:vertical-rl]">
                   {interest.title}
                 </span>
               )}
