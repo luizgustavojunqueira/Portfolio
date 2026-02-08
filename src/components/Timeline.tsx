@@ -9,12 +9,12 @@ interface ITimeline {
 
 function Timeline({ points }: ITimeline) {
   return (
-    <div className="max-w-2xl">
+    <div className="w-full max-w-2xl">
       {points.map((point, index) => (
         <div key={index} className="flex gap-6 relative">
           <div className="flex flex-col items-center">
             <div
-              className={`w-6 h-6 rounded-full border-2 ${
+              className={`w-6 h-6 rounded-full border-2 shrink-0 ${
                 point.active
                   ? "bg-black border-black dark:bg-white dark:border-white"
                   : "border-gray-300 bg-white dark:border-gray-600 dark:bg-gray-900"
@@ -29,7 +29,7 @@ function Timeline({ points }: ITimeline) {
             <span className="text-sm text-gray-400 dark:text-gray-500">
               {point.year}
             </span>
-            <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+            <h3 className="font-semibold text-lg text-gray-900 dark:text-white min-h-[3.5rem]">
               {point.title}
             </h3>
             {point.description && (

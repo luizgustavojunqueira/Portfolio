@@ -4,16 +4,16 @@ export default function About({ lang }: { lang: "en" | "pt" }) {
   return (
     <section
       id="#about"
-      className="flex flex-col items-center min-h-screen z-10 relative"
+      className="flex flex-col items-center min-h-screen z-10 relative px-6 md:px-12"
     >
-      <section className="flex flex-row items-start justify-start gap-20 mt-30">
-        <section className="max-w-4xl flex flex-col items-start justify-start gap-8 ">
-          <h2 className="text-8xl font-bold flex flex-col justify-start items-start">
-            <span>Sobre</span>
-            <span>Mim</span>
+      <section className="flex flex-col lg:grid lg:grid-cols-2 items-start gap-12 lg:gap-20 mt-16 lg:mt-30 w-full max-w-6xl">
+        <section className="w-full flex flex-col items-start justify-start gap-8">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold flex flex-col justify-start items-start">
+            <span>{lang === "pt" ? "Sobre" : "About"}</span>
+            <span>{lang === "pt" ? "Mim" : "Me"}</span>
           </h2>
 
-          <span className="text-xl/9 text-left max-w-xl text-slate-500 dark:text-slate-400 mt-10">
+          <span className="text-lg/8 md:text-xl/9 text-left max-w-xl text-slate-500 dark:text-slate-400 mt-6 lg:mt-10">
             {lang === "pt" ? (
               <>
                 Meu nome é{" "}
@@ -89,29 +89,41 @@ export default function About({ lang }: { lang: "en" | "pt" }) {
             )}
           </span>
         </section>
-        <section className="">
+        <section className="w-full">
           <Timeline
             points={[
               {
                 year: 2018,
-                title: "Primeiro contato com programação",
+                title:
+                  lang === "pt"
+                    ? "Primeiro contato com Programação"
+                    : "First contact with Programming",
                 active: false,
               },
               {
                 year: 2020,
-                title: "Curso técnico em informática",
+                title:
+                  lang === "pt"
+                    ? "Curso técnico em informática"
+                    : "Technical course in computer science",
                 description: "IFMS",
                 active: false,
               },
               {
                 year: 2022,
-                title: "Curso de Ciência da Computação",
+                title:
+                  lang === "pt"
+                    ? "Início da graduação em Ciência da Computação"
+                    : "Start of graduation in Computer Science",
                 description: "UFMS",
                 active: false,
               },
               {
                 year: 2025,
-                title: "Gradução em Ciência da Computação",
+                title:
+                  lang === "pt"
+                    ? "Graduado em Ciência da Computação"
+                    : "Graduated in Computer Science",
                 active: true,
               },
             ]}
