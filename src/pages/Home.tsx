@@ -1,20 +1,26 @@
 import Link from "../components/Link";
 import ShootingStars from "../components/ShootingStars";
 
-export default function Home({ lang }: { lang: "en" | "pt" }) {
+interface IHome {
+  lang: "en" | "pt";
+  theme: "light" | "dark";
+}
+
+export default function Home({ lang, theme }: IHome) {
   return (
     <>
-      <ShootingStars />
+      <ShootingStars theme={theme} />
 
       <div className="flex flex-col items-center justify-center h-screen z-10 relative">
-        <h1 className="flex flex-col text-9xl font-bold text-center mb-20">
+        <h1 className="flex flex-col text-9xl font-bold items-center justify-center text-center mb-20 text-blac dark:text-white">
           <span>Luiz</span>
           <span>Gustavo</span>
         </h1>
 
-        <span className="text-xl text-center max-w-xl text-slate-500">
-          Criando experiências digitais através de código limpo, design
-          funcional e atenção aos detalhes.
+        <span className="text-xl text-center max-w-xl text-slate-500 dark:text-white">
+          {lang === "pt"
+            ? "Criando experiências digitais através de código limpo, design funcional e atenção aos detalhes."
+            : "Crafting digital experiences through clean code, functional design, and attention to detail."}
         </span>
 
         <nav className="flex gap-4 mt-10">
@@ -26,7 +32,7 @@ export default function Home({ lang }: { lang: "en" | "pt" }) {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Projetos
+            {lang === "pt" ? "Projetos" : "Projects"}
           </Link>
 
           <Link
@@ -37,7 +43,7 @@ export default function Home({ lang }: { lang: "en" | "pt" }) {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Sobre
+            {lang === "pt" ? "Sobre" : "About"}
           </Link>
           <Link
             to="#contact"
@@ -47,7 +53,7 @@ export default function Home({ lang }: { lang: "en" | "pt" }) {
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
-            Contato
+            {lang === "pt" ? "Contato" : "Contact"}
           </Link>
         </nav>
       </div>

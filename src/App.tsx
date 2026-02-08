@@ -34,9 +34,12 @@ function App() {
   }, []);
 
   return (
-    <main id="app" className=" bg-slate-100 text-black ">
-      {/* <Header theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} /> */}
-      <Home lang={lang} />
+    <main
+      id="app"
+      className="bg-slate-100 dark:bg-black text-black dark:text-white transition-colors"
+    >
+      <Header theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} />
+      <Home lang={lang} theme={theme} />
     </main>
   );
 }

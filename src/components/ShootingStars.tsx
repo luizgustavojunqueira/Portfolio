@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 
 const STAR_COUNT = 50;
-const STAR_SIZE = 3;
-const STAR_LIFETIME = 500;
-const STAR_TRAIL_LENGTH = 25;
+const STAR_SIZE = 2;
+const STAR_LIFETIME = 400;
+const STAR_TRAIL_LENGTH = 20;
 
 class Star {
   constructor(
@@ -19,6 +19,7 @@ class Star {
       height: number;
       ctx: CanvasRenderingContext2D;
     },
+    public baseColor: number = 0,
   ) {
     this.reset();
   }
@@ -77,7 +78,7 @@ class Star {
       opacity *= progress;
 
       this.canvas.ctx.globalAlpha = opacity;
-      this.canvas.ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+      this.canvas.ctx.strokeStyle = `rgba(${this.baseColor}, ${this.baseColor}, ${this.baseColor}, ${opacity})`;
       this.canvas.ctx.lineWidth = STAR_SIZE * (1 - progress * 0.7);
       this.canvas.ctx.lineCap = "round";
 
@@ -95,7 +96,7 @@ class Star {
     }
 
     this.canvas.ctx.globalAlpha = starOpacity;
-    this.canvas.ctx.fillStyle = `rgba(0, 0, 0, ${starOpacity})`;
+    this.canvas.ctx.fillStyle = `rgba(${this.baseColor}, ${this.baseColor}, ${this.baseColor}, ${starOpacity})`;
     this.canvas.ctx.beginPath();
     this.canvas.ctx.arc(this.pos.x, this.pos.y, STAR_SIZE, 0, 2 * Math.PI);
     this.canvas.ctx.fill();
@@ -103,7 +104,11 @@ class Star {
   }
 }
 
-function ShootingStars() {
+interface IShootingStars {
+  theme: "light" | "dark";
+}
+
+function ShootingStars({ theme }: IShootingStars) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -130,6 +135,7 @@ function ShootingStars() {
           [],
           0,
           { width: window.innerWidth, height: window.innerHeight, ctx },
+          theme === "dark" ? 255 : 0,
         ),
       );
     }
@@ -137,8 +143,7 @@ function ShootingStars() {
     let animationFrameId: number;
 
     function animate() {
-      ctx.fillStyle = "rgba(250, 250, 250, 0.2)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       stars.forEach((star) => {
         star.update();
@@ -152,7 +157,7 @@ function ShootingStars() {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [theme]);
 
   return (
     <canvas
