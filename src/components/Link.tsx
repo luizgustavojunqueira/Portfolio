@@ -9,7 +9,8 @@ function Link({
 }) {
   return (
     <a
-      className="h-full flex items-center justify-center max-w-30 w-30 my-2 md:my-0 md:py-4 border-b-3 dark:border-darkgray dark:hover:border-slate-100 border-slate-100 hover:border-darkgray"
+      className="h-full flex items-center justify-center max-w-30 w-30 m-0 p-2 hover:text-slate-500 transition-colors duration-300 hover:cursor-pointer
+      relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-slate-500 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
       onClick={(e) => {
         e.preventDefault();
         onClick(to);
