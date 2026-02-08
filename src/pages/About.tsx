@@ -1,3 +1,4 @@
+import Interests from "../components/Interests";
 import Timeline from "../components/Timeline";
 
 export default function About({ lang }: { lang: "en" | "pt" }) {
@@ -129,6 +130,145 @@ export default function About({ lang }: { lang: "en" | "pt" }) {
             ]}
           />
         </section>
+      </section>
+
+      <section className="w-full max-w-275 my-8 lg:my-12">
+        <Interests
+          label={lang === "pt" ? "interesses" : "interests"}
+          interests={
+            lang === "pt"
+              ? [
+                  {
+                    id: "backend",
+                    title: "Backend",
+                    subtitle: "APIs, microserviços e arquitetura de sistemas",
+                    description:
+                      "Gosto de entender como sistemas funcionam por baixo dos panos. Construir APIs robustas e escaláveis é onde me sinto mais em casa.",
+                    icon: "●",
+                    tags: ["Node.js", "Elixir", "Go", ".NET", "SQL", "Docker"],
+                  },
+                  {
+                    id: "frontend",
+                    title: "Frontend",
+                    subtitle: "Interfaces minimalistas e experiências fluidas",
+                    description:
+                      "Transformar lógica em algo visual e interativo é satisfatório. Gosto de criar interfaces que falem por si só.",
+                    icon: "◼",
+                    tags: ["React", "Vue", "Tailwind", "Figma"],
+                  },
+                  {
+                    id: "automation",
+                    title: "Automação",
+                    subtitle: "Scripts, pipelines e processos automatizados",
+                    description:
+                      "Se algo precisa ser feito mais de duas vezes, eu automatizo. Eficiência é eliminar trabalho repetitivo.",
+                    icon: "▶",
+                    tags: ["Python", "Bash", "GitHub Actions", "CI/CD"],
+                  },
+                  {
+                    id: "robotics",
+                    title: "Robótica",
+                    subtitle: "Sistemas autônomos e controle embarcado",
+                    description:
+                      "Fazer software interagir com o mundo físico é outra dimensão. Robótica é onde código ganha corpo.",
+                    icon: "◆",
+                    tags: ["ROS", "C++", "Python", "Gazebo"],
+                  },
+                  {
+                    id: "iot",
+                    title: "IoT",
+                    subtitle: "Dispositivos conectados e monitoramento remoto",
+                    description:
+                      "Conectar dispositivos e coletar dados em tempo real abre possibilidades enormas. É a ponte entre o digital e o real.",
+                    icon: "⬢",
+                    tags: ["MQTT", "ESP32", "Raspberry Pi", "LoRa"],
+                  },
+                  {
+                    id: "embedded",
+                    title: "Embarcados",
+                    subtitle: "Firmware, sensores e hardware de baixo nível",
+                    description:
+                      "Programar com recursos limitados exige criatividade. Cada byte importa — e isso me fascina.",
+                    icon: "▼",
+                    tags: ["C", "C++", "RTOS", "ESP32"],
+                  },
+                  {
+                    id: "opensource",
+                    title: "Open Source",
+                    subtitle: "Contribuições e projetos colaborativos",
+                    description:
+                      "Construir em público, aprender com outros e contribuir de volta. O melhor jeito de evoluir como dev.",
+                    icon: "★",
+                    tags: ["GitHub", "OSS", "Comunidade", "Colaboração"],
+                  },
+                ]
+              : [
+                  {
+                    id: "backend",
+                    title: "Backend",
+                    subtitle: "APIs, microservices and system architecture",
+                    description:
+                      "I enjoy understanding how systems work under the hood. Building robust and scalable APIs is where I feel most at home.",
+                    icon: "●",
+                    tags: ["Node.js", "Elixir", "Go", ".NET", "SQL", "Docker"],
+                  },
+                  {
+                    id: "frontend",
+                    title: "Frontend",
+                    subtitle: "Minimalist interfaces and fluid experiences",
+                    description:
+                      "Transforming logic into something visual and interactive is satisfying. I like creating interfaces that speak for themselves.",
+                    icon: "◼",
+                    tags: ["React", "Vue", "Tailwind", "Figma"],
+                  },
+                  {
+                    id: "automation",
+                    title: "Automation",
+                    subtitle: "Scripts, pipelines and automated processes",
+                    description:
+                      "If something needs to be done more than twice, I automate it. Efficiency is about eliminating repetitive work.",
+                    icon: "▶",
+                    tags: ["Python", "Bash", "GitHub Actions", "CI/CD"],
+                  },
+                  {
+                    id: "robotics",
+                    title: "Robotics",
+                    subtitle: "Autonomous systems and embedded control",
+                    description:
+                      "Making software interact with the physical world is another dimension. Robotics is where code takes shape.",
+                    icon: "◆",
+                    tags: ["ROS", "C++", "Python", "Gazebo"],
+                  },
+                  {
+                    id: "iot",
+                    title: "IoT",
+                    subtitle: "Connected devices and remote monitoring",
+                    description:
+                      "Connecting devices and collecting data in real-time opens up huge possibilities. It's the bridge between digital and physical.",
+                    icon: "⬢",
+                    tags: ["MQTT", "ESP32", "Raspberry Pi", "LoRa"],
+                  },
+                  {
+                    id: "embedded",
+                    title: "Embedded",
+                    subtitle: "Firmware, sensors and low-level hardware",
+                    description:
+                      "Programming with limited resources requires creativity. Every byte matters — and that fascinates me.",
+                    icon: "▼",
+                    tags: ["C", "C++", "RTOS", "ESP32"],
+                  },
+                  {
+                    id: "opensource",
+                    title: "Open Source",
+                    subtitle: "Contributions and collaborative projects",
+                    description:
+                      "Building in public, learning from others and contributing back. The best way to evolve as a dev.",
+                    icon: "★",
+                    tags: ["GitHub", "OSS", "Community", "Collaboration"],
+                  },
+                ]
+          }
+        />
       </section>
       {/*       <FadeSection id="about" observing={observing}> */}
       {/*         <h2 className="page-header"> */}
