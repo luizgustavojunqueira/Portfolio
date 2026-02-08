@@ -11,7 +11,10 @@ export default function Home({ lang, theme }: IHome) {
     <>
       <ShootingStars theme={theme} />
 
-      <div className="flex flex-col items-center justify-center h-screen z-10 relative">
+      <section
+        id="home"
+        className="flex flex-col items-center justify-center h-screen z-10 relative"
+      >
         <h1 className="flex flex-col text-9xl font-bold items-center justify-center text-center mb-20 text-blac dark:text-white">
           <span>Luiz</span>
           <span>Gustavo</span>
@@ -56,7 +59,7 @@ export default function Home({ lang, theme }: IHome) {
             {lang === "pt" ? "Contato" : "Contact"}
           </Link>
         </nav>
-      </div>
+      </section>
     </>
   );
 }
