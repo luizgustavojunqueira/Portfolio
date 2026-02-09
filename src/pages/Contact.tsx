@@ -144,6 +144,30 @@ export default function Contact({ lang }: { lang: "en" | "pt" }) {
           </a>
         </aside>
       </div>
+
+      <div
+        className="absolute bottom-4 left-1/2 -translate-x-1/2"
+        onClick={() =>
+          document
+            .getElementById("#home")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={3}
+          stroke="currentColor"
+          className="w-5 h-5 animate-bounce"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4.5 15.75l7.5-7.5 7.5 7.5"
+          />
+        </svg>
+      </div>
     </section>
   );
 }

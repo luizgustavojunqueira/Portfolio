@@ -59,6 +59,29 @@ export default function Home({ lang, theme }: IHome) {
             {lang === "pt" ? "Contato" : "Contact"}
           </Link>
         </nav>
+
+        <div
+          className="absolute bottom-4 left-1/2 -translate-x-1/2"
+          onClick={() =>
+            document
+              .getElementById("#about")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          <svg
+            className="w-5 h-5 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </div>
       </section>
     </>
   );
