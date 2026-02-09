@@ -11,7 +11,7 @@ function Header({
   setLang: Dispatch<SetStateAction<"en" | "pt">>;
 }) {
   return (
-    <header className="transition-colors fixed top-0 left-0 w-full z-50 text-black dark:text-verylightgreen flex flex-col items-center justify-between p-4 px-6">
+    <header className="transition-colors fixed top-0 left-0 w-full z-10 text-black dark:text-verylightgreen flex flex-col items-center justify-between p-4 px-6">
       <section className="w-full flex flex-row justify-end gap-7">
         <button
           onClick={() =>
