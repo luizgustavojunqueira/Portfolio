@@ -24,6 +24,7 @@ export default function Projects({ lang }: { lang: "en" | "pt" }) {
 
       <section className="w-full h-fit max-w-275 my-8 lg:my-12">
         <ProjectsSection
+          lang={lang}
           projects={[
             {
               id: "portfolio",

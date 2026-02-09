@@ -6,10 +6,11 @@ import { Project } from "./types";
 import ProjectDrawer from "./ProjectDrawer";
 
 interface IProjectsSection {
+  lang: "pt" | "en";
   projects: Project[];
 }
 
-export default function ProjectsSection({ projects }: IProjectsSection) {
+export default function ProjectsSection({ projects, lang }: IProjectsSection) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const highlightedProjects = projects.filter((project) => project.isHighlight);
   const otherProjects = projects.filter((project) => !project.isHighlight);
@@ -20,7 +21,7 @@ export default function ProjectsSection({ projects }: IProjectsSection) {
         {highlightedProjects.length > 0 && (
           <div>
             <h3 className="text-xs text-slate-400 uppercase tracking-widest mb-4">
-              Destaque
+              {lang === "pt" ? "Projetos em Destaque" : "Highlighted Projects"}
             </h3>
             <ProjectHighlight projects={highlightedProjects} />
           </div>
@@ -29,7 +30,7 @@ export default function ProjectsSection({ projects }: IProjectsSection) {
         {otherProjects.length > 0 && (
           <div>
             <h3 className="text-xs text-slate-400 uppercase tracking-widest mb-4">
-              Outros Projetos
+              {lang === "pt" ? "Outros Projetos" : "Other Projects"}
             </h3>
             <div className="flex flex-col">
               {otherProjects.map((project, index) => (
