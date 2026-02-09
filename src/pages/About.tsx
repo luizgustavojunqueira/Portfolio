@@ -5,7 +5,7 @@ export default function About({ lang }: { lang: "en" | "pt" }) {
   return (
     <section
       id="#about"
-      className="flex flex-col items-center min-h-screen z-10 relative px-6 md:px-12"
+      className="flex flex-col items-center min-h-screen z-1 relative px-6 md:px-12"
     >
       <section className="flex flex-col lg:grid lg:grid-cols-2 items-start gap-12 lg:gap-20 mt-16 lg:mt-30 w-full max-w-6xl">
         <section className="w-full flex flex-col items-start justify-start gap-8">

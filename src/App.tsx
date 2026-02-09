@@ -41,6 +41,7 @@ function App() {
       <Header theme={theme} setTheme={setTheme} lang={lang} setLang={setLang} />
       <Home lang={lang} theme={theme} />
       <About lang={lang} />
+      <Projects lang={lang} />
     </main>
   );
 }

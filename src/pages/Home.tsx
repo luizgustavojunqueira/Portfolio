@@ -13,7 +13,7 @@ export default function Home({ lang, theme }: IHome) {
 
       <section
         id="home"
-        className="flex flex-col items-center justify-center min-h-screen py-16 z-10 relative"
+        className="flex flex-col items-center justify-center min-h-screen py-16 z-1 relative"
       >
         <h1 className="flex flex-col text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold items-center justify-center text-center mb-6 md:mb-20 text-black dark:text-white">
           <span>Luiz</span>
