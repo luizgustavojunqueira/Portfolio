@@ -29,7 +29,7 @@ function Timeline({ points }: ITimeline) {
             <span className="text-sm text-gray-400 dark:text-gray-500">
               {point.year}
             </span>
-            <h3 className="font-semibold text-lg text-gray-900 dark:text-white min-h-[3.5rem]">
+            <h3 className="font-semibold text-lg text-gray-900 dark:text-white min-h-7">
               {point.title}
             </h3>
             {point.description && (

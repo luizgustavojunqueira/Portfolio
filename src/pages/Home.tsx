@@ -12,7 +12,7 @@ export default function Home({ lang, theme }: IHome) {
       <ShootingStars theme={theme} />
 
       <section
-        id="home"
+        id="#home"
         className="flex flex-col items-center justify-center min-h-screen py-16 z-1 relative"
       >
         <h1 className="flex flex-col text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold items-center justify-center text-center mb-6 md:mb-20 text-black dark:text-white">
@@ -28,6 +28,16 @@ export default function Home({ lang, theme }: IHome) {
 
         <nav className="flex flex-wrap justify-center gap-4 mt-8 md:mt-10 px-6">
           <Link
+            to="#about"
+            onClick={(to) =>
+              document
+                .getElementById(to)
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            {lang === "pt" ? "Sobre" : "About"}
+          </Link>
+          <Link
             to="#projects"
             onClick={(to) =>
               document
@@ -38,16 +48,6 @@ export default function Home({ lang, theme }: IHome) {
             {lang === "pt" ? "Projetos" : "Projects"}
           </Link>
 
-          <Link
-            to="#about"
-            onClick={(to) =>
-              document
-                .getElementById(to)
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            {lang === "pt" ? "Sobre" : "About"}
-          </Link>
           <Link
             to="#contact"
             onClick={(to) =>

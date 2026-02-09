@@ -97,7 +97,7 @@ export default function ProjectHighlight({ projects }: IProjectHighlight) {
   return (
     <section className="w-full">
       <div
-        className="relative bg-white dark:bg-darkgray  overflow-hidden group hover:bg-black hover:border-black dark:hover:bg-white dark:hover:border-white"
+        className="relative bg-white dark:bg-black overflow-hidden group hover:bg-black hover:border-black dark:hover:bg-white dark:hover:border-white"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onTouchStart={handleTouchStart}
@@ -126,7 +126,7 @@ export default function ProjectHighlight({ projects }: IProjectHighlight) {
                   {project.title}
                 </h3>
 
-                <p className="text-slate-600 dark:text-slate-400 group-hover:text-white/70 dark:group-hover:text-black/70 text-sm md:text-base text-justify mt-4 leading-relaxed transition-colors duration-300">
+                <p className="text-slate-600 dark:text-slate-200 group-hover:text-white/70 dark:group-hover:text-black/70 text-sm md:text-base text-justify mt-4 leading-relaxed transition-colors duration-300">
                   {project.description}
                 </p>
 
@@ -134,7 +134,7 @@ export default function ProjectHighlight({ projects }: IProjectHighlight) {
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="text-xs border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 group-hover:border-white/20 dark:group-hover:border-black/20 group-hover:text-white dark:group-hover:text-black px-3 py-1 rounded transition-colors duration-300"
+                      className="text-xs border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 group-hover:border-white/20 dark:group-hover:border-black/20 group-hover:text-white dark:group-hover:text-black px-3 py-1 rounded transition-colors duration-300"
                     >
                       {tag}
                     </span>
@@ -144,7 +144,7 @@ export default function ProjectHighlight({ projects }: IProjectHighlight) {
                 <div className="flex flex-col sm:flex-row items-stretch gap-3 mt-6">
                   {project.githubUrl && (
                     <a
-                      className="flex-1 text-center border border-slate-300 dark:border-slate-600 group-hover:border-white/20 dark:group-hover:border-black/20 text-slate-700 dark:text-slate-300 group-hover:text-white dark:group-hover:text-black rounded-md px-4 py-2 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-800 group-hover:hover:bg-white/10 dark:group-hover:hover:bg-black/10"
+                      className="flex-1 text-center border border-slate-300 dark:border-slate-600 group-hover:border-white/20 dark:group-hover:border-black/20 text-slate-700 dark:text-slate-200 group-hover:text-white dark:group-hover:text-black rounded-md px-4 py-2 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-800 group-hover:hover:bg-white/10 dark:group-hover:hover:bg-black/10"
                       href={project.githubUrl}
                       target="_blank"
                       rel="noreferrer"
@@ -154,7 +154,7 @@ export default function ProjectHighlight({ projects }: IProjectHighlight) {
                   )}
                   {project.liveUrl && (
                     <a
-                      className="flex-1 text-center border border-slate-300 dark:border-slate-600 group-hover:border-white/20 dark:group-hover:border-black/20 text-slate-700 dark:text-slate-300 group-hover:text-white dark:group-hover:text-black rounded-md px-4 py-2 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-800 group-hover:hover:bg-white/10 dark:group-hover:hover:bg-black/10"
+                      className="flex-1 text-center border border-slate-300 dark:border-slate-600 group-hover:border-white/20 dark:group-hover:border-black/20 text-slate-700 dark:text-slate-200 group-hover:text-white dark:group-hover:text-black rounded-md px-4 py-2 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-800 group-hover:hover:bg-white/10 dark:group-hover:hover:bg-black/10"
                       href={project.liveUrl}
                       target="_blank"
                       rel="noreferrer"
@@ -210,8 +210,8 @@ export default function ProjectHighlight({ projects }: IProjectHighlight) {
                   }}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentProjectIndex
-                      ? "bg-white dark:bg-darkgray w-6"
-                      : "bg-white/50 dark:bg-darkgray/50 hover:bg-white/70 hover:dark:bg-darkgray/70"
+                      ? "bg-white dark:bg-white dark:group-hover:bg-black w-6"
+                      : "bg-white/50 dark:bg-white/50 hover:bg-white/70 dark:group-hover:bg-black/70"
                   } ${isHovered || showControls ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
                   aria-label={`Go to project ${index + 1}`}
                 />

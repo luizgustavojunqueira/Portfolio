@@ -4,6 +4,7 @@ const STAR_COUNT = 50;
 const STAR_SIZE = 2;
 const STAR_LIFETIME = 400;
 const STAR_TRAIL_LENGTH = 20;
+const STAR_SPEED = 2;
 
 class Star {
   constructor(
@@ -129,7 +130,7 @@ function ShootingStars({ theme }: IShootingStars) {
             x: Math.random() * window.innerWidth,
             y: Math.random() * window.innerHeight,
           },
-          5,
+          STAR_SPEED,
           Math.random() * 2 * Math.PI,
           { x: 0, y: 0 },
           [],

@@ -29,7 +29,7 @@ function Interests({ interests, label }: IInterests) {
           {label}
         </div>
       )}
-      <div className="flex flex-col md:flex-row md:h-80 border border-slate-300 dark:border-slate-700 overflow-hidden">
+      <div className="flex flex-col md:flex-row md:h-80 border border-slate-100 dark:border-slate-900 overflow-hidden">
         {interests.map((interest, index) => {
           const isOpen = currentOpen === index;
           return (
@@ -38,8 +38,8 @@ function Interests({ interests, label }: IInterests) {
               onMouseEnter={() => handleInteraction(index)}
               onClick={() => setCurrentOpen(index)}
               className={`relative overflow-hidden flex transition-[flex-grow,height] duration-200 ease-in-out
-                    ${isOpen ? "h-80 md:h-full md:flex-[3_1_0%] bg-black dark:bg-white flex-row-reverse" : "h-13 md:h-full md:flex-[0_0_52px] min-w-13 bg-slate-100 dark:bg-slate-900"}
-                  ${index !== interests.length - 1 ? "border-b md:border-r border-slate-300 dark:border-slate-700" : ""}
+                    ${isOpen ? "h-80 md:h-full md:flex-[3_1_0%] bg-black dark:bg-white flex-row-reverse" : "h-13 md:h-full md:flex-[0_0_52px] min-w-13 bg-white dark:bg-black"}
+                  // ${index !== interests.length - 1 ? "border-b md:border-r border-slate-100 dark:border-slate-900" : ""}
                   group
                 `}
               style={{ minWidth: isOpen ? 220 : 52 }}

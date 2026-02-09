@@ -42,7 +42,7 @@ export default function ProjectDrawer({ project, onClose }: IProjectDrawer) {
   return (
     <>
       <div
-        className={`fixed inset-0 bg-black/50 dark:bg-white/50 z-40 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/50 dark:bg-dark-gray z-40 transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0"
         }`}
         onClick={onClose}
